@@ -1,0 +1,177 @@
+.Body h1{
+    padding-top: 20px;
+}
+.Body .div1 {
+    width: 120px;
+    height: 4px;
+    border-radius: 10px;
+    background-image: linear-gradient( to right , black 30% , white 1%);
+}
+
+.Body .Box-profile {
+    margin-top: 20px   ;
+    display: grid;
+    grid-template-columns: repeat(2 , auto) ;
+    grid-template-rows: repeat(3 , auto) ;
+    gap: 20px ;
+    
+}
+
+
+
+.Body .Box-profile .slide{
+    background-color: white;
+    padding: 10px ;
+    border-radius: 13px;
+    overflow: hidden;
+    font-size: 15px;
+}
+
+
+.Body .Box-profile :first-child{
+    grid-column: 1 / 4;
+}
+
+.Body .Box-profile .slide .profile {
+    display: flex;
+    align-items: center;
+}
+
+.Body .Box-profile .slide .profile .avatar{
+    width: 300px;
+    border-right: 1px #eee solid;
+    text-align: center;
+}
+.Body .Box-profile .slide .profile .avatar img{
+    width: 110px;
+}
+.Body .Box-profile .slide .profile .avatar span,
+p {
+    color: #777;
+}
+.Body .Box-profile .slide .profile .avatar .rate{
+    width: 60%;
+    background-image: linear-gradient(to right , #32a38b 70% , #eee 1%);
+    height: 5px;
+    margin: auto;
+}
+
+.Body .Box-profile .slide .profile .avatar .star .istar{
+    color: #e79e16;
+    margin: 10px 0;
+}
+
+.slide .profile .information {
+    width: 100%;
+}
+hr {
+    border: 1px solid #eee;
+}
+.slide .profile .information .gene {
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.slide .profile .information .gene h4 {
+    color: #aaa;
+}
+
+.slide .profile .information .gene .det {
+    display: flex;
+    gap: 40px;
+}
+
+.slide .profile .information .gene .det span{
+    color: #777;
+}
+
+.slide .profile .information .gene input{
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.slide .profile .information .gene .button {
+    width: 90px;
+    height: 16px;
+    border-radius: 20px;
+    background-color: #ccc;
+    position: relative;
+    cursor: pointer;
+}
+.slide .profile .information .gene .button::before {
+    font-family: var(--fa-style-family-classic);
+    font-weight: 550;
+    position: absolute;
+    content: "\f00d";
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    color: #ccc;
+    background-color: white;
+    bottom: 2px;
+    left: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.slide .profile .information .gene  input:checked + .button {
+    background-color:#256dbe ;
+}
+.slide .profile .information .gene input:checked   + .button::before {
+    font-family: var(--fa-style-family-classic);
+    position: absolute;
+    content: "\f00c";
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    color: #256dbe;
+    background-color: white;
+    bottom: 2px;
+    left: 73px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+.Body .Box-profile :nth-child(3){
+    grid-column: 2 / 4;
+}
+
+.Body .Box-profile .slide >p{
+    color: #777;
+}
+.slide .skill div {
+    margin: 20px 0;
+}
+.slide .skill span {
+    background-color: #eee;
+    margin-left:  10px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.slide .activities .activity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.slide .activities .activity .icon{
+    display: flex;
+    align-items: center;
+}
+.slide .activities .activity .time {
+    text-align: center;
+}
+
+.slide .activities .activity .icon img {
+    width: 70px;
+    margin-right: 10px;
+}

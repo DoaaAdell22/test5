@@ -1,0 +1,62 @@
+.index .sidbar{
+    padding: 20px;
+    position: relative;
+    background-color: white;
+    box-shadow: 1px 1px 9px 0px #eee;
+    width: 200px;
+}
+
+
+.sidbar h3 {
+    margin: 0;
+    text-align: center;
+}
+
+.sidbar h3::before{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 2px;
+    background-color: black;
+    transform: translate(-11px, 33px);
+}
+
+
+.sidbar h3::after {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background-color: black;
+    border-radius: 50%;
+    transform: translate(-38px, 25px);
+    border: 3px white solid;
+}
+    
+
+
+.sidbar ul{
+    margin-top: 40px;
+    margin-left: -50px;
+}
+.sidbar li a {
+    font-size: 14px;
+    display: flex;
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+    margin-bottom: 7px;
+    transition: 0.3s;
+}
+
+.sidbar li span{
+    margin-left: 5px;
+}
+
+.sidbar li a:hover{
+    background-color: #fafafa
+}
+
+.sidbar ul .active {
+    background-color: #fafafa;
+}

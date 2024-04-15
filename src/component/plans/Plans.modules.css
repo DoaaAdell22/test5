@@ -1,0 +1,110 @@
+.Body h1{
+    padding-top: 30px;
+}
+.Body .div1 {
+    width: 130px;
+    height: 4px;
+    border-radius: 10px;
+    background-image: linear-gradient( to right , black 30% , white 1%);
+}
+
+.Body .Box-plan {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(2 , 550px);
+    grid-template-rows: repeat(2 , auto);
+    gap: 20px;
+    
+}
+
+.Body .Box-plan  .slide{
+    background-color: white;
+    padding: 15px;
+    position: relative;
+}
+
+.Box-plan .slide .plan {
+    width: 100%;
+    height: 115px;
+    background-color: #05b631c7;
+    text-align: center;
+    border: 3px white solid;
+    outline: 3px #05b631c7 solid;
+    color: white;
+    line-height: 0.2;
+    margin-bottom: 30px;
+}
+.Box-plan .slide #bl{
+    outline: 3px #1687bb solid;
+    background-color: #1f8ec2;
+}
+.Box-plan .slide #or{
+    outline: 3px #ffa408 solid;
+    background-color: #f8a100;
+}
+.Box-plan .slide .plan h3{
+    font-size: x-large;
+}
+
+
+.Box-plan .slide .plan p {
+    color : white;
+    font-size: 40px;
+    position: relative;
+}
+.Box-plan .slide .plan p::before {
+    position: absolute;
+    content: "$";
+    top: -10px;
+    left: 39%;
+    color: white;
+    font-size: 25px;
+}
+
+
+.Box-plan .slide .features .feat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+
+}
+
+.Box-plan hr{
+    border: 0.5px solid #eee;
+}
+
+.Box-plan .slide .features .feat .text #gr{
+    color: #05b631c7;
+}
+
+.Box-plan .slide .features .feat .text #re{
+    color: red;
+}
+
+.Box-plan .slide .features .feat .info i{
+    color: #777;
+    cursor: pointer;
+}
+
+.Box-plan .slide button {
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    padding: 5px 10px;
+    margin: 10px 0;
+}
+.Box-plan .slide .button{
+    background-color: #05b631c7;
+} 
+.Box-plan .slide .button2{
+    background-color: #1f8ec2;
+} 
+
+.Box-plan .slide .mess {
+    color: #777;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 17px;
+}

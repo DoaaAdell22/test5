@@ -1,0 +1,87 @@
+.Body h1{
+    padding-top: 30px;
+    font-weight: bolder;
+}
+.Body .div1 {
+    width: 130px;
+    height: 4px;
+    border-radius: 10px;
+    background-image: linear-gradient( to right , black 30% , white 1%);
+}
+
+.Body .Box-friend {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3 , 360px) ;
+    grid-template-rows: repeat(5 , auto) ;
+    gap: 20px ;
+}
+.Body .Box-friend  .slide{
+    background-color: white;
+    padding: 10px 15px ;
+    border-radius: 13px;
+    overflow: hidden;
+    font-size: 13px;
+}
+.Box-friend hr{
+    border: 0.2px solid #eee;
+}
+.Body .Box-friend  .slide{
+    background-color: white;
+    padding: 15px;
+    border-radius: 13px;
+}
+
+.Box-friend .slide .contact a{
+    background-color: #eee;
+    padding: 5px 8px;
+    border-radius: 50%;
+    color: #777;
+    margin-right: 3px;
+}
+.Box-friend .slide .contact a:hover{
+    background-color: #0075ff;
+    color: white;
+    transition: 0.3s;
+}
+.Box-friend .slide img{
+    width: 90px;
+    border-radius: 50%;
+    
+}
+
+.Box-friend .slide .profile {
+    text-align: center;
+    line-height: 0.7;
+}
+.Box-friend .slide p{
+    color: #777;
+    font-size: 13px;
+}
+
+.Box-friend .slide .icon div{
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+.Box-friend .slide .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Box-friend .slide .info div a {
+    padding: 3px 5px;
+    border-radius: 6px;
+    color: white;
+    margin-right: 4px;
+
+}
+
+.Box-friend .slide .info div :first-child{
+    background-color: #0075ff;
+}
+
+.Box-friend .slide .info div :last-child{
+    background-color: #e03636;
+}

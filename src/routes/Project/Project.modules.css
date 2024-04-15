@@ -1,0 +1,130 @@
+.Body h1{
+    padding-top: 30px;
+}
+.Body .div1 {
+    width: 130px;
+    height: 4px;
+    border-radius: 10px;
+    background-image: linear-gradient( to right , black 30% , white 1%);
+}
+
+.Body .Boxs-project {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(2 , 550px);
+    grid-template-rows: repeat(6 , auto);
+    gap: 20px;
+}
+
+
+
+.Body .Boxs-project  .slide{
+    background-color: white;
+    padding: 10px 15px ;
+    border-radius: 13px;
+    overflow: hidden;
+    font-size: 13px;
+}
+
+
+.Boxs-project .slide .project {
+    position: relative;
+}
+
+.Boxs-project .slide .project .text p{
+    color: #777;
+}
+.Boxs-project .slide .project .team {
+    margin: 40px 0;
+}
+.Boxs-project .slide .project .team a {
+    position: absolute;
+    top: 70px;
+}
+.Boxs-project .slide .project .team a:nth-child(2) {
+    left: 25px;
+}
+.Boxs-project .slide .project .team a:nth-child(3) {
+    left: 50px;
+}
+.Boxs-project .slide .project .team a:nth-child(4) {
+    left: 75px;
+}
+.Boxs-project .slide .project .team a:nth-child(5) {
+    left: 100px;
+}
+.Boxs-project .slide .project .team a:hover {
+    z-index: 1000;
+}
+.Boxs-project .slide .project .team img {
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+.Boxs-project .slide .project .jobs {
+    display: flex;
+    justify-content: end;
+}
+
+.Boxs-project .slide .project .jobs div {
+    padding: 5px;
+    background-color: #eee;
+    border-radius: 4px;
+    font-size: 11px;
+    margin: 0 4px;
+}
+
+.Boxs-project .slide .project .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Boxs-project .slide .project .price span {
+    width: 250px;
+    height: 8px;
+    border-radius: 6px;
+}
+
+.Boxs-project .slide .project #price span {
+    background-image: linear-gradient(to right , #df2e2e 50% , #eee 1%);
+}
+
+.Boxs-project .slide .project #price2 span {
+    background-image: linear-gradient(to right , #30bb6f 80% , #eee 1%);
+}
+.Boxs-project .slide .project #price3 span {
+    background-image: linear-gradient(to right , #3094bb 100% , #eee 1%);
+}
+.Boxs-project .slide .project #price4 span {
+    background-image: linear-gradient(to right , #30bb6f 60% , #eee 1%);
+}
+.Boxs-project .slide .project #price5 span {
+    background-image: linear-gradient(to right , #30bb6f 70% , #eee 1%);
+}
+.Boxs-project .slide .project #price6 span {
+    background-image: linear-gradient(to right  , #df2e2e 40% , #eee 1%);
+}
+.Boxs-project .slide .project #price7 span {
+    background-image: linear-gradient(to right , #30bb6f 60% , #eee 1%);
+}
+.Boxs-project .slide .project #price8 span {
+    background-image: linear-gradient(to right , #30bb6f 60% , #eee 1%);
+}
+.Boxs-project .slide .project #price9 span {
+    background-image: linear-gradient(to right , #30bb6f 90% , #eee 1%);
+}
+
+.Boxs-project .slide .project .price p{
+    color: #777;
+}
+
+.Boxs-project .slide .project .text :last-child{
+    position: absolute;
+    top: -6%;
+    left: 88%;
+}
+
+.Boxs-project .slide hr{
+    border: 0.2px solid #eee;
+}

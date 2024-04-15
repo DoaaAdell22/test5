@@ -1,0 +1,74 @@
+.Body h1{
+    padding-top: 30px;
+    font-weight: bolder;
+}
+.Body .div1 {
+    width: 130px;
+    height: 4px;
+    border-radius: 10px;
+    background-image: linear-gradient( to right , black 30% , white 1%);
+}
+
+.Body .Box-courses {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3 , 360px);
+    grid-template-rows: repeat(4 , auto);
+    gap: 20px ;
+    
+}
+
+.Body .Box-courses .slide{
+    background-color: white;
+    padding: 15px;
+    border-radius: 13px;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.Box-courses hr{
+    border: 0.3px solid #eeeeee;
+    position: relative;
+    margin: 18px -15px;
+}
+.Box-courses hr::before{
+    position: absolute;
+    content: "Course Info";
+    background-color: #2e8ac7;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    font-size: 14px;
+}
+.Box-courses .slide .imge .course {
+    width: 360px;
+    height: 250px;
+    border-radius: 6px;
+    margin: -15px;
+}
+.Box-courses .slide .imge .avatar{
+    width: 70px;
+    border-radius: 50%;
+    border: 2px solid white;
+    position: absolute;
+    left: 15px;
+}
+
+
+
+.Box-courses .slide .text p{
+    color: #777;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.Box-courses .slide .info {
+    display: flex;
+    justify-content: space-between;
+    color: #777;
+    font-size: 12px;
+}
