@@ -1,12 +1,12 @@
 import React from 'react'
 import { FaDownload } from "react-icons/fa6";
-
+import {DownSquareTwoTone } from '@ant-design/icons';
 const Slidefiles = ({image , file , name , date ,size}) => {
   return (
             <div>
                     <div className="slide">
                             <div className="down">
-                                <FaDownload />
+                                <DownSquareTwoTone />
                             </div>
                             <div className="image">
                                 <img src={image} alt="" />

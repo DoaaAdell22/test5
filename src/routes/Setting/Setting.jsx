@@ -4,13 +4,28 @@ import { Link } from 'react-router-dom'
 import { FaTwitter , FaFacebookF , FaLinkedin ,  FaYoutube } from "react-icons/fa";
 import Title from '../../component/Title';
 import { FaServer } from "react-icons/fa6";
+import { Switch } from "antd";
+import { Input, Radio, Space } from 'antd';
+import { useState } from 'react';
+
 
 
 const Setting = () => {
+
+    const onChange = (checked) => {
+        console.log(`switch to ${checked}`);
+    }
+
+        const [value, setValue] = useState(1);
+        const onchange = (e) => {
+          console.log('radio checked', e.target.value);
+          setValue(e.target.value);
+        }
+
     return (
         <div>
-            <Title>Settings</Title>
-                                <div className="div1"></div>
+                    <Title>Settings</Title>
+                    <div className="div1"></div>
                     <div className="Boxs-setting">
                         <div className="slide">
                             <h2>Site Control</h2>
@@ -20,10 +35,7 @@ const Setting = () => {
                                     <div>Website Control</div>
                                     <p>Open/Close Website And Type The Reason</p>
                                 </div>
-                                <label >
-                                        <input className="checkbox" type="checkbox" checked />
-                                        <div className="button"></div>
-                                </label>
+                                <Switch defaultChecked onChange={onChange} />
                             </div>
                             <br />
                             <textarea placeholder="Close Message Content"></textarea>
@@ -65,10 +77,7 @@ const Setting = () => {
                                     <div>Two-Factor Authentication</div>
                                     <p>Enable/Disable The Feature</p>
                                 </div>
-                                <label >
-                                    <input className="checkbox" type="checkbox" checked />
-                                    <div className="button"></div>
-                                </label>
+                                <Switch defaultChecked onChange={onChange} />
                             </div>
                             <hr />
                             <div className="secu">
@@ -137,18 +146,13 @@ const Setting = () => {
                             <h2>Backup Manager</h2>
                             <p>Control Backup Time And Location</p>
                             <div className="backup">
-                                <div>
-                                    <input type="radio" name="os" value="Daily" id="Daily" checked />
-                                    <label for="Daily">Daily</label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="os" value="Weekly" id="Weekly" />
-                                    <label for="Weekly">Weekly</label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="os" value="Monthly" id="Monthly" />
-                                    <label for="Monthly">Monthly</label>
-                                </div>
+                                <Radio.Group onChange={onchange} value={value}>
+                                    <Space direction="vertical">
+                                        <Radio value={1}>Daily</Radio>
+                                        <Radio value={2}>Weekly</Radio>
+                                        <Radio value={3}>Monthly</Radio>
+                                    </Space>
+                                </Radio.Group>
                             </div>
                             <hr />
                             <div className="manger">

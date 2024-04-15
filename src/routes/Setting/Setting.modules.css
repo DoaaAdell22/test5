@@ -309,24 +309,21 @@
 }
 
 .Boxs-setting .slide .backup div{
-    margin-bottom: 15px;
-    padding: 5px;
+    margin-bottom: 10px;
     font-size: 16px;
-    
-
 }
-.Boxs-setting .slide .backup label{
+/* .Boxs-setting .slide .backup label{
     cursor: pointer;
     position: relative;
     padding: 30px;
-}
+} */
 .Boxs-setting .slide .backup div input{
     appearance: none;
     -webkit-appearance: none;
 }
 
 
-.Boxs-setting .slide .backup label::before{
+/* .Boxs-setting .slide .backup label::before{
     content: "";
     position: absolute;
     width: 20px;
@@ -337,9 +334,9 @@
     left: 0;
     top:50%;
     margin-top: -9px;
-}
+} */
 
-.Boxs-setting .slide .backup label::after{
+/* .Boxs-setting .slide .backup label::after{
     content: "";
     position: absolute;
     cursor: pointer;
@@ -359,7 +356,7 @@
 
 .Boxs-setting .slide .backup input:checked  + label::after{
     transform: scale(1);
-}
+} */
 
 .Boxs-setting .slide .manger {
     display: flex;

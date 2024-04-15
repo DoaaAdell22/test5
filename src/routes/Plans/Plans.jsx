@@ -18,7 +18,7 @@ const styles = {
         {
             title : "Free" ,
             price : "0.00" ,
-            color : "#0f0" , 
+            color : "#05b631c7" , 
             features : [
                 
                     {text : "Access All Text Lessons",
@@ -63,7 +63,7 @@ const styles = {
         {
             title : "Basic" ,
             price : "7.99" ,
-            color : "#00f" , 
+            color : "#1687bb" , 
             features : [
                 
                     {text : "Access All Text Lessons",
@@ -108,7 +108,7 @@ const styles = {
         {
             title : "Premium" ,
             price : "19.99" ,
-            color : "orange" , 
+            color : "#ffa408" , 
             features : [
                 
                     {text : "Access All Text Lessons",

@@ -20,7 +20,7 @@ const Dashboard = () => {
                                     <h2>Welcome</h2>
                                     <h3>Elzero</h3>
                                 </div>
-                                <img src="../media/welcome.png" alt="" />
+                                <img src="/public/media/welcome.png" alt="" />
                             </div>
                             <div className="image"><img  src="/media/avatar.png" width="60px" alt="" /></div>
                             <div className="body">
