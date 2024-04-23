@@ -18,6 +18,7 @@ import Cars from './routes/Cars Model/Cars';
 import Users from './routes/Users/Users';
 import Usersdata from './routes/UsersData/Usersdata';
 import Add from './routes/add/Add';
+import Edituser from './routes/edit/Edituser';
 
 
 
@@ -69,9 +70,15 @@ const routes = createBrowserRouter([
       },
       {
       
+        path : ":users/edit/:id",
+        element : <Edituser />
+      },
+      {
+      
             path : "/add",
             element : <Add />
-      }
+      },
+      
       
     ]
   }

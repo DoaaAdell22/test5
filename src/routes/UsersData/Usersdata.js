@@ -4,7 +4,7 @@ import "./UserData.css"
 import { useParams } from 'react-router-dom'
 import{ Descriptions }from"antd"
 
-;
+
 const Usersdata = () => {
 
   const [value , setValue] = useState({})

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Table } from "antd";
+import { Button, Table } from "antd";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
@@ -8,47 +8,10 @@ const Users = () => {
 
 
     const [data , setData] = useState([]);
-    const [del , setDele] = useState([
-        {
-            title: 'userId',
-            dataIndex: 'userId',
-            key: 'userId',
-        },
-        {
-            title: 'id',
-            dataIndex: 'id',
-            key: 'id',
-        },
-        {
-            title: 'title',
-            dataIndex: 'title',
-            key: 'title',
-        },
-        {
-            title: 'body',
-            dataIndex: 'body',
-            key: 'body',
-        },
-        {
-            title : "actions",
-            dataIndex : "actions",
-            key : "actions",
-            render:(text,record)=><Link to = {`/users/show/${record.id}`}>show</Link> 
-            
-        },
-        {
-            title : "actions",
-            dataIndex : "actions",
-            key : "actions",
-            render:(text,record)=><Link><button onClick={(e ,idx) => deleter(e , idx)}>remove</button></Link> 
-            
-        },
-    ])
-
-    
-    const deleter = (e , clickedIdx) =>{
-        const removing = del.filter((el , idx) => idx !== clickedIdx );
-        setDele(removing)
+  
+    const deleter = (elementId) =>{
+        const removing = data.filter((el , idx) => el.id !== elementId );
+        setData(removing)
     }
     
         
@@ -77,23 +40,15 @@ const Users = () => {
             title : "actions",
             dataIndex : "actions",
             key : "actions",
-            render:(text,record)=><Link to = {`/users/show/${record.id}`}>show</Link> 
+            render:(text,record)=>
+            <div style={{display : "flex", alignItems : "center", justifyContent : "center", gap : "10px"}} >
+                <Link to = {`/users/show/${record.id}`}>show</Link> 
+                <Link to = {`/users/edit/${record.id}`}>edit</Link> 
+                <Button onClick={() => deleter(record.id)}>remove</Button> 
+            </div>
             
         },
-        {
-            title : "actions",
-            dataIndex : "actions",
-            key : "actions",
-            render:(text,record)=><Link onClick={(e ,idx) => deleter(e , idx)}>remove</Link> 
-            
-        },
-        {
-            title : "actions",
-            dataIndex : "actions",
-            key : "actions",
-            render:(text,record)=><Link to = {null}>edit</Link> 
-            
-        },
+        
         ];
 
         useEffect(()=>{
