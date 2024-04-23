@@ -2,6 +2,7 @@ import React from 'react'
 import "./Header.css"
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { IoIosSearch } from "react-icons/io";
+import { Link } from 'react-router-dom';
 
 
 const Header = () => {

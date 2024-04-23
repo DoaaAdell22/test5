@@ -359,14 +359,13 @@
 } */
 
 .Boxs-setting .slide .manger {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    padding-top: 20px;
+
+padding-top: 20px;
+text-align: center;
 }
 
 
-.Boxs-setting .slide .manger  input {
+/* .Boxs-setting .slide .manger  input {
     appearance: none;
 }
 
@@ -392,4 +391,4 @@
 .Boxs-settings .slide .manger input:checked + .serve {
     border-color: #256dbe ;
     color: #256dbe;
-}
+} */

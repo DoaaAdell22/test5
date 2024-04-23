@@ -3,6 +3,8 @@ import { FaRegChartBar , FaRegUser ,  FaDiagramProject , FaGraduationCap , FaReg
 import { IoSettingsSharp } from "react-icons/io5";
 import { FaRegFile } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
+import { FaUserFriends } from "react-icons/fa";
+
 
 
 
@@ -59,6 +61,12 @@ const Sidebar = () => {
                         <NavLink  to="plans">
                             <FaRegCreditCard />
                             <span>Plans</span>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to = "users" >
+                            <FaUserFriends />
+                            <span>Users</span>
                         </NavLink>
                     </li>
                 </ul>

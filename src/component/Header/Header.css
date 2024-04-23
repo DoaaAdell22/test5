@@ -5,6 +5,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: white;
+    margin-bottom: 10px;
 }
 .index .header .search{
     position: relative;
@@ -67,4 +68,12 @@
 .index .header .icons  img {
     margin: 0 15px;
     width: 30px;
+}
+
+.index .header .icons .car {
+    margin-right: 15px;
+    background-color: #cf9e20;
+    color: white;
+    padding: 3px;
+    border-radius: 10px;
 }

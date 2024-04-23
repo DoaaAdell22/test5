@@ -3,10 +3,13 @@ import "./Setting.modules.css"
 import { Link } from 'react-router-dom'
 import { FaTwitter , FaFacebookF , FaLinkedin ,  FaYoutube } from "react-icons/fa";
 import Title from '../../component/Title';
-import { FaServer } from "react-icons/fa6";
 import { Switch } from "antd";
-import { Input, Radio, Space } from 'antd';
+import {  Radio, Space  } from 'antd';
 import { useState } from 'react';
+import { Flex } from 'antd';
+
+
+
 
 
 
@@ -18,9 +21,17 @@ const Setting = () => {
 
         const [value, setValue] = useState(1);
         const onchange = (e) => {
-          console.log('radio checked', e.target.value);
-          setValue(e.target.value);
+            console.log('radio checked', e.target.value);
+            setValue(e.target.value);
         }
+
+
+        const [change , setChange] =useState(false);
+
+        const changerHandler = () => {
+            setChange(!change)
+        }
+
 
     return (
         <div>
@@ -54,8 +65,8 @@ const Setting = () => {
                                 </div>                            
                                 <div>
                                     <label forhtml="email">email</label>
-                                    <input id="email" type="email" placeholder="o@nn.sa" disabled />
-                                    <Link to="#">change</Link>
+                                    {change?<input  id="email" type="email" /> : <input  id="email" type="email" placeholder="o@nn.sa" disabled/> }
+                                    <Link onClick={changerHandler} to="#">{change ? "reset" : "change"}</Link>
                                 </div>
                             </form>
                         </div>
@@ -156,28 +167,15 @@ const Setting = () => {
                             </div>
                             <hr />
                             <div className="manger">
-                                <input type="radio" name="servers" id="server-one" />
-                                <div className='serve'>
-                                    <label  forhtml="server-one">
-                                        <FaServer className='i'/>
-                                        Megaman
-                                    </label>
-                                </div>
-                                <input type="radio" name="servers" id="server-two" checked />
-                                <div className='serve'>
-                                    <label  forhtml="server-two">
-                                        <FaServer className='i'/>
-                                        Zero
-                                    </label>
-                                </div>
-                                <input type="radio" name="servers" id="server-three" />
-                                <div className='serve'> 
-                                    <label  forhtml="server-three">
-                                        <FaServer className='i' />
-                                        Sigma
-                                    </label>
-                                </div>
+                                <Flex style={{display : "flex", justifyContent : "center", alignItems : "center"}} vertical gap="middle">
+                                    <Radio.Group defaultValue="b" buttonStyle="solid">
+                                        <Radio.Button  value="a"  style={{width : "150px", height : "40px"}}>Megaman</Radio.Button>
+                                        <Radio.Button value="b" style={{width : "150px" , height : "40px"}}>Zero</Radio.Button>
+                                        <Radio.Button value="c" style={{width : "150px" , height : "40px"}}>Sigma</Radio.Button>
+                                    </Radio.Group>
+                                </Flex>
                             </div>
+                            
                         </div>
                     </div>
         </div>

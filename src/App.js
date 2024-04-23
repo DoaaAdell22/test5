@@ -14,6 +14,10 @@ import Courses from './routes/Courses/Courses';
 import Friends from './routes/Friends/Friends';
 import Files from './routes/Files/Files';
 import Plans from './routes/Plans/Plans';
+import Cars from './routes/Cars Model/Cars';
+import Users from './routes/Users/Users';
+import Usersdata from './routes/UsersData/Usersdata';
+import Add from './routes/add/Add';
 
 
 
@@ -50,10 +54,30 @@ const routes = createBrowserRouter([
       {
         path :"plans",
         element : <Plans />
+      },
+      {
+        // path : "cars" ,
+        // element : <Cars />
+      },
+      {
+        path : "users",
+        element : <Users />,
+      },
+      {
+            path : "users/show/:id" ,
+            element : <Usersdata />
+      },
+      {
+      
+            path : "/add",
+            element : <Add />
       }
+      
     ]
   }
 ])
+
+console.log(window.location.href)
 
 function App() {
   return (

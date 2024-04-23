@@ -379,12 +379,11 @@
 
 }
 
-.Boxs .slide .tasks .task .icon i {
+.Boxs .slide .tasks .task .icon button  {
     cursor: pointer;
     position: relative;
 }
-
-.Boxs .slide .tasks .task .icon i:hover{
+.Boxs .slide .tasks .task .icon button:hover{
     color: red;
 }
 
@@ -604,10 +603,7 @@
 }
 
 
-.Boxs .slide .social .followers,
-.like,
-.subs,
-.in{
+.Boxs .slide .social .card{
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -615,63 +611,35 @@
     padding-right: 5px;
 }
 
-.Boxs .slide .social .followers {
+.Boxs .slide .social .card {
     background-color:#a2c6f0  ;   
 }
-.Boxs .slide .social .like {
-    background-color: #bfd8f5 ;
-}
 
-.Boxs .slide .social .subs {
-    background-color: #f3cece;
-}
-.Boxs .slide .social .in {
-    background-color:  #acccf0;
-}
 
-.Boxs .slide .social .icon {
+.Boxs .slide .social .card .icon {
     display: flex;
     align-items: center;
     gap: 30px;
     color: white;
     
 }
-.Boxs .slide .social  .icon .i:hover{
+.Boxs .slide .social .card  .icon .i:hover{
     transform: rotate(5deg);
 }
-.Boxs .slide .social .followers .icon .i{
-    background-color: #2378d7;
-    padding: 7px;
-    font-size: 30px;
-    
-}
-.Boxs .slide .social .like .icon .i{
-    background-color: #378ae9;
+
+.Boxs .slide .social .card .icon .i{
     font-size: 30px;
     padding: 7px;
-    
-}
-.Boxs .slide .social .subs .icon .i{
-    background-color:#df1a1a;
-    font-size: 30px;
-    padding: 7px;
-    
-}
-.Boxs .slide .social .in .icon .i{
-    background-color:  #3071bb;
-    font-size: 30px;
-    padding: 7px;
-    
 }
 
-.Boxs .slide .social a{
+.Boxs .slide .social .card .link{
     padding: 6px;
     border-radius: 5px;
     color: white;
     font-size: 14px;
 }
 
-.Boxs .slide .social .followers a{
+/* .Boxs .slide .social .followers a{
     background-color: #4492eb;
 }
 
@@ -683,7 +651,7 @@
 }
 .Boxs .slide .social .in a{
     background-color: #3071bb;
-}
+} */
 
 
 .Body .Boxs :nth-child(13){

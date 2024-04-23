@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BsTelephoneFill } from "react-icons/bs";
 import { FaRegEnvelope } from "react-icons/fa";
 import { Link } from 'react-router-dom';
@@ -7,13 +7,21 @@ import { FaCodeCommit } from "react-icons/fa6";
 import { FaRegNewspaper } from "react-icons/fa6";
 
 
-const Slidefriends = ({img , name , job , info1 , info2 , info3 , Date}) => {
+const Slidefriends = ({img , name , job , info1 , info2 , info3 , Date , handler ,idx}) => {
+    
+    const [call , setCaller] =useState(false)
+
+    const caller = () =>{
+        
+            setCaller(true)
+        }
+ 
     
   return (
         <div>
                 <div className="slide">
                     <div className="contact">
-                        <Link to="#"><BsTelephoneFill /></Link>
+                        <Link  onClick={caller} to="#"><BsTelephoneFill /></Link>
                         <Link to="#"><FaRegEnvelope /></Link>
                     </div>
                     <div className="profile">
@@ -23,6 +31,7 @@ const Slidefriends = ({img , name , job , info1 , info2 , info3 , Date}) => {
                             <p>{job}</p>
                         </div>
                     </div>
+                    <div>{call ? "calling" : ""}</div>
                     <hr />
                     <div className="icon">
                         <div>
@@ -43,7 +52,7 @@ const Slidefriends = ({img , name , job , info1 , info2 , info3 , Date}) => {
                         <p>{Date}</p>
                         <div>
                             <Link to="/profile">Profile</Link>
-                            <Link to="#">Remove</Link>
+                            <Link onClick={(e) => handler(e , idx)} to="#">Remove</Link>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,32 @@
+.mainn {
+    position: relative;
+    height: 100vh;
+
+}
+
+.form {
+    background-color: #3fc7cc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 7px;
+    color: white;
+    text-align: center;
+    padding: 20px 100px;
+    box-shadow: 1px 1px 9px 0px #3fc7cc;
+    border: 1px solid #8cecf3;
+    border-radius: 10px;
+}
+
+
+
+
+form input {
+    border-radius: 7px;
+    margin: 15px  ;
+    padding: 5px 30px;
+    border: none;
+}
+
+

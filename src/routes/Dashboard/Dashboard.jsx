@@ -1,14 +1,101 @@
-import React from 'react'
+
 import "./Dashboard.modules.css"
 import { FaDollarSign , FaUser , FaRectangleList , FaRegRectangleXmark    } from "react-icons/fa6";
 import { FaCode , FaSpinner  } from "react-icons/fa";
 import { FaRegCircleCheck } from "react-icons/fa6";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { FaTwitter , FaFacebookF , FaYoutube , FaLinkedin  } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+import { Fragment, useState } from 'react';
+import { MdDoneOutline } from "react-icons/md";
+import { FaRegHeart } from "react-icons/fa";
+import { FaRegComment } from "react-icons/fa";
+
 
 
 
 const Dashboard = () => {
+    const [like , setLike] =useState(false)
+    const [social , setSocial ] =useState(false)
+    const [save , setSave] = useState(false);
+    const [task , setTask] = useState(
+        [
+        {
+            title : "Record One New Video" ,
+            text : "Record Python Create Exe Project"
+        },
+        {
+            title : "Write Article " ,
+            text : "Write Low Level vs High Level Languages"
+        },
+        {
+            title : "Finish Project" ,
+            text : "Publish Academy Programming Project"
+        },
+        {
+            title : "Attend The Meetin" ,
+            text : "Attend The Project Business Analysis Meetin"
+        },
+        {
+            title : "Finish Lesson" ,
+            text : "Finish Teaching Flex Box"
+        }
+        ]
+    
+    )
+
+    const remover = (event , clickedIdx) =>{
+        const delethandler = task.filter((el , idx) => idx !== clickedIdx);
+        setTask(delethandler);
+    }
+
+    const saving = () =>{
+        setSave(!save) 
+    }
+
+    const media = [
+        {
+            icon : <FaTwitter /> ,
+            person : "90k Followers",
+            link : "follow" ,
+            un : "unfollow" ,
+            background : "#a2c6f0" ,
+            color : "#2378d7"
+        },
+        {
+            icon : <FaFacebookF /> ,
+            person : "2M Like",
+            link : "Like",
+            un : "unLike" ,
+            background : "#bfd8f5" ,
+            color : " #378ae9"
+        },
+        {
+            icon : <FaYoutube /> ,
+            person : "1M Subs",
+            link : "Subscribe",
+            un : "unSubscribe" ,
+            background : "#f3cece" ,
+            color : "#df1a1a"
+        },
+        {
+            icon : <FaLinkedin /> ,
+            person : "70K Followers",
+            link : "follow",
+            un : "unfollow" ,
+            background : "#acccf0" ,
+            color : "#3071bb"
+        }
+    ]
+
+    const click = (e) => {
+        setSocial(!social)
+    }
+
+    const react = () =>{
+        setLike(!like)
+    } 
+
     return (
         <div>
             <h1>Dashboard</h1>
@@ -20,7 +107,7 @@ const Dashboard = () => {
                                     <h2>Welcome</h2>
                                     <h3>Elzero</h3>
                                 </div>
-                                <img src="/public/media/welcome.png" alt="" />
+                                <img src="/media/welcome.png" alt="" />
                             </div>
                             <div className="image"><img  src="/media/avatar.png" width="60px" alt="" /></div>
                             <div className="body">
@@ -37,18 +124,18 @@ const Dashboard = () => {
                                     <p>Earned</p>
                                 </div>
                             </div>
-                            <div className="button"><a href="profile.html">Profile</a></div>
+                            <div className="button"><Link to="profile">Profile</Link></div>
                         </div>
                         <div className="slide">
                             <h2>Quick Draft</h2>
                             <p>Write A Draft Your Ideas</p>
-                            <form>
+                            <form >
                                 <input type="text" name="Titlel" placeholder="Title" />
-                                <input type="text" id="in" name="subject" placeholder="Your Thought" />
-                        
+                                <input type="text" id="in" name="subject" placeholder="Your Thought"  />
                             </form>
                             <div className="butt">
-                                <input type="submit" value="Save" />
+                                <input type="submit" value={save ? "reset" :"save"} onClick={saving}  />
+                                {save ? <MdDoneOutline style={{color : "blue" , marginLeft : "4px"}} /> : ""}
                                 </div>
                         </div>
                         <div className="slide">
@@ -165,55 +252,22 @@ const Dashboard = () => {
                         <div className="slide">
                             <h2>Latest Tasks</h2>
                             <div className="tasks">
-                                <div className="task">
-                                    <div className="t">
-                                        <h3>Record One New Video</h3>
-                                        <p>Record Python Create Exe Project</p>
+                                {task.map(function(el ,idx){
+                                    return  (
+                                    <Fragment>    
+                                    <div className="task"> 
+                                        <div className="t">
+                                            <h3>{el.title}</h3>
+                                            <p>{el.text}</p>
+                                        </div>
+                                        <div className="icon">
+                                            <button style={{border : "none"}} onClick={(e)=> remover(e , idx )} ><RiDeleteBin6Line  /></button>
+                                        </div>
                                     </div>
-                                    <div className="icon">
-                                        <RiDeleteBin6Line />
-                                    </div>
-                                </div>
-                                <hr />
-                                <div className="task">
-                                    <div className="t">
-                                        <h3>Write Article </h3>
-                                        <p>Write Low Level vs High Level Languages</p>
-                                    </div>
-                                    <div className="icon">
-                                        <RiDeleteBin6Line />
-                                    </div>
-                                </div>
-                                <hr />
-                                <div className="task">
-                                    <div className="t">
-                                        <h3>Finish Project</h3>
-                                        <p>Publish Academy Programming Project</p>
-                                    </div>
-                                    <div className="icon">
-                                        <RiDeleteBin6Line />
-                                    </div>
-                                </div>
-                                <hr />
-                                <div className="task" id="t">
-                                    <div className="t" >
-                                        <h3>Attend The Meetin</h3>
-                                        <p id="t">Attend The Project Business Analysis Meetin</p>
-                                    </div>
-                                    <div className="icon">
-                                        <RiDeleteBin6Line />
-                                    </div>
-                                </div>
-                                <hr />
-                                <div className="task">
-                                    <div className="t" >
-                                        <h3>Finish Lesson</h3>
-                                        <p>Finish Teaching Flex Box</p>
-                                    </div>
-                                    <div className="icon">
-                                        <RiDeleteBin6Line />
-                                    </div>
-                                </div>
+                                    <hr />
+                                    </Fragment>
+                                            )}
+                                )}
                             </div>
                         </div>
                         <div className="slide">
@@ -397,12 +451,12 @@ const Dashboard = () => {
                                 <br />
                                 <div className="info">
                                     <div className="like">
-                                        <i className="fa-regular fa-heart"></i>
-                                        <span>1.8k</span>
+                                        <FaRegHeart onClick={react} style={like ? {color : "red" } : {color : ""}} />
+                                        <span style={{marginLeft : "5px"}} >{like ? "1,9k" : "1,8k"}</span>
                                     </div>
                                     <div className="comment">
-                                        <i className="fa-regular fa-comments"></i>
-                                        <span>500</span>
+                                        <FaRegComment />
+                                        <span style={{marginLeft : "5px"}} >500</span>
                                     </div>
                                 </div>
                             </div>
@@ -410,42 +464,20 @@ const Dashboard = () => {
                         <div className="slide">
                             <h2>Social Media Stats</h2>
                             <div className="social">
-                                <div className="followers">
-                                    <div className="icon">
-                                        <div className="i">
-                                            <FaTwitter />
-                                        </div>
-                                        <div>90k Followers</div>
-                                    </div>
-                                    <a href="">follow</a>
-                                </div>
-                                <div className="like">
-                                    <div className="icon">
-                                        <div className="i">
-                                            <FaFacebookF />
-                                        </div>
-                                        <div>2M Like</div>
-                                    </div>
-                                    <a href="">Like</a>
-                                </div>
-                                <div className="subs">
-                                    <div className="icon">
-                                        <div className="i">
-                                            <FaYoutube />
-                                        </div>
-                                        <div>1M Subs</div>
-                                    </div>
-                                    <a href="">Subscribe</a>
-                                </div>
-                                <div className="in">
-                                    <div className="icon">
-                                        <div className="i">
-                                            <FaLinkedin />
-                                        </div>
-                                        <div>70K Followers</div>
-                                    </div>
-                                    <a href="">follow</a>
-                                </div>
+                                {media.map(function(el) {
+                                    return (
+                                        <div>
+                                            <div className="card" style={{background : el.background}}>
+                                                <div className="icon">
+                                                    <div className="i" style={{backgroundColor : el.color}}>
+                                                        {el.icon}
+                                                    </div>
+                                                    <div>{el.person}</div>
+                                                </div>
+                                                <Link className="link" style={{backgroundColor : el.color}} to="" onClick={click}>{!social? el.link : el.un}</Link>
+                                            </div>
+                                        </div>)
+                                    })}
                             </div>
                         </div>
                         <div className="slide">
