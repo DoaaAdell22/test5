@@ -12,7 +12,7 @@
     margin-top: 20px   ;
     display: grid;
     grid-template-columns: repeat(2 , 550px) ; 
-    grid-template-rows: repeat(3 , auto)  ;
+    grid-template-rows: repeat(4 , auto)  ;
     gap: 20px ;
     
 }
@@ -48,51 +48,6 @@
     position: relative;
 }
 
-.Boxs-setting .slide .control label input {
-    appearance: none;
-    -webkit-appearance: none;
-}
-
-.Boxs-setting .slide .control label .button::before{
-    font-family: var(--fa-style-family-classic);
-    font-weight: 900;
-    position: absolute;
-    content: "\f00d";
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    color: #ccc;
-    background-color: white;
-    bottom: 5px;
-    left: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-
-.Boxs-setting .slide .control label input:checked + .button{
-    background-color:#256dbe ;
-}
-.Boxs-setting .slide .control label input:checked + .button::before{
-    font-family: var(--fa-style-family-classic);
-    position: absolute;
-    content: "\f00c";
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    color: #256dbe;
-    background-color: white;
-    bottom: 5px;
-    left: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s;
-
-}
 
 .Boxs-setting .slide textarea {
     border: 1px solid #ccc;
@@ -120,12 +75,11 @@
 
 .Boxs-setting .slide form :last-child input {
     display: inline;
-    width:85%;
+    width:80%;
     margin-right: 10px;
 }
 .Boxs-setting .slide form :last-child a{
     color: #256dbe;
-    
 }
 
 
@@ -252,111 +206,16 @@
 }
 
 .Boxs-setting .slide .widg div{
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     padding: 5px;
     font-size: 16px;
 }
-.Boxs-setting .slide .widg  label{
-    cursor: pointer;
-    position: relative;
-    padding: 30px;
-}
-.Boxs-setting .slide .widg div input{
-    
-    appearance: none;
-    -webkit-appearance: none;
-}
 
-
-.Boxs-setting .slide .widg label::before{
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 6px;
-    border: 2px solid gray;
-    cursor: pointer;
-    left: 0;
-    top:50%;
-    margin-top: -9px;
-}
-
-.Boxs-setting .slide .widg label::after{
-    font-family: var(--fa-style-family-classic);
-    position: absolute;
-    content: "\f00c";
-    font-weight: 900;
-    color: white;
-    cursor: pointer;
-    border-radius: 6px;
-    top:50%;
-    margin-top: -9px;
-    left: 0;
-    border: 2px solid #256dbe;
-    background-color: #256dbe;
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: scale(0) rotate(360deg);
-    transition: 0.3S;
-}
-
-.Boxs-setting .slide .widg div input:checked + label:after{
-    transform: scale(1) rotate(0);
-}
 
 .Boxs-setting .slide .backup div{
     margin-bottom: 10px;
     font-size: 16px;
 }
-/* .Boxs-setting .slide .backup label{
-    cursor: pointer;
-    position: relative;
-    padding: 30px;
-} */
-.Boxs-setting .slide .backup div input{
-    appearance: none;
-    -webkit-appearance: none;
-}
-
-
-/* .Boxs-setting .slide .backup label::before{
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 2px solid #256dbe;
-    cursor: pointer;
-    left: 0;
-    top:50%;
-    margin-top: -9px;
-} */
-
-/* .Boxs-setting .slide .backup label::after{
-    content: "";
-    position: absolute;
-    cursor: pointer;
-    border-radius: 50%;
-    top:50%;
-    left: 4%;
-    margin-top: -4px;
-    background-color: #256dbe;
-    width: 15px;
-    height: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: scale(0);
-    transition: 0.3s;
-}
-
-.Boxs-setting .slide .backup input:checked  + label::after{
-    transform: scale(1);
-} */
 
 .Boxs-setting .slide .manger {
 
@@ -365,30 +224,4 @@ text-align: center;
 }
 
 
-/* .Boxs-setting .slide .manger  input {
-    appearance: none;
-}
 
-.Boxs-setting .slide .manger .serve{
-    margin-bottom: 15px;
-    border-radius: 10px;
-    width: 100%;
-    border: 2px solid #eee;
-    position: relative;
-}
-
-.Boxs-setting .slide .manger label{
-    cursor: pointer;
-} 
-
-.Boxs-setting .slide .manger label .i{
-    margin-bottom: 10px;
-    font-weight: 900;
-
-}
-
-
-.Boxs-settings .slide .manger input:checked + .serve {
-    border-color: #256dbe ;
-    color: #256dbe;
-} */

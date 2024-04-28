@@ -1,5 +1,4 @@
 import React from 'react'
-import { FaDownload } from "react-icons/fa6";
 import {DownSquareTwoTone } from '@ant-design/icons';
 const Slidefiles = ({image , file , name , date ,size}) => {
   return (

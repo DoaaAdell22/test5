@@ -5,7 +5,7 @@ import { FaRegFilePdf } from "react-icons/fa6";
 import { FaImages } from "react-icons/fa";
 import { AiOutlineFileWord } from "react-icons/ai";
 import { BsFiletypeCsv } from "react-icons/bs";
-
+import {Link} from "react-router-dom"
 
 
 const Files = () => {
@@ -148,10 +148,10 @@ const Files = () => {
                                     </div>
                                     <div className="size">6.5GB</div>
                                 </div>
-                                <a className="upload" href="#">
+                                <Link className="upload" to="#">
                                     <i className="fa-solid fa-angles-up mr-10"></i>
                                     <sapn>Upload</sapn>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         {cardFiles.map ((el) => <Slidefiles image ={el.image} file={el.file} name ={el.name} date ={el.date} size ={el.size}  />)}

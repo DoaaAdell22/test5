@@ -14,11 +14,16 @@ import Courses from './routes/Courses/Courses';
 import Friends from './routes/Friends/Friends';
 import Files from './routes/Files/Files';
 import Plans from './routes/Plans/Plans';
-import Cars from './routes/Cars Model/Cars';
 import Users from './routes/Users/Users';
 import Usersdata from './routes/UsersData/Usersdata';
 import Add from './routes/add/Add';
 import Edituser from './routes/edit/Edituser';
+import Providers from './routes/Providers/Providers';
+import ShowContractors from './routes/ShowContractors/ShowContractors';
+import ProjectTypes from './routes/Project Types/ProjectTypes';
+import Showprojects from './routes/Showprojects/Showprojects';
+import Addproject from './routes/Addproject/Addproject';
+import {Toaster  } from 'react-hot-toast';
 
 
 
@@ -57,27 +62,61 @@ const routes = createBrowserRouter([
         element : <Plans />
       },
       {
-        // path : "cars" ,
-        // element : <Cars />
-      },
-      {
         path : "users",
-        element : <Users />,
+
+        children:[
+          {
+            path : "" ,
+            element : <Users />,
+      },
+        {
+              path : "show/:id" ,
+              element : <Usersdata />
+        },
+        {
+        
+          path : "edit/:id",
+          element : <Edituser />
+        },
+        {
+              path : "add",
+              element : <Add />
+        },
+        ]
       },
       {
-            path : "users/show/:id" ,
-            element : <Usersdata />
+        path : "Contractors" ,
+        children : [
+          {
+            path : "" ,
+            element : <Providers />
+          },
+          {
+            path : ":show/:id",
+            element : <ShowContractors />
+          },
+        ]
       },
-      {
       
-        path : ":users/edit/:id",
-        element : <Edituser />
-      },
       {
-      
-            path : "/add",
-            element : <Add />
+        path : "ProjectTypes",
+        children : [
+          {
+            path : "" ,
+            element : <ProjectTypes />,
+          },
+          {
+            path : ":show/:id",
+            element : <Showprojects />
+          },
+          {
+            path : "add",
+            element : <Addproject />
+          }
+        ]
       },
+     
+      
       
       
     ]
@@ -89,6 +128,7 @@ console.log(window.location.href)
 function App() {
   return (
     <div className="app">
+      <Toaster/>
       <RouterProvider router={routes} />
     </div>
   );

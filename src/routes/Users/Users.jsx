@@ -1,62 +1,71 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Table } from "antd";
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { FaEye } from "react-icons/fa";
 
 
 const Users = () => {
 
-
+    const [loading , setLoading] = useState(false)
     const [data , setData] = useState([]);
-  
+    const navigate = useNavigate()
     const deleter = (elementId) =>{
         const removing = data.filter((el , idx) => el.id !== elementId );
         setData(removing)
     }
-    
-        
+
         const columns = [
-        {
-            title: 'userId',
-            dataIndex: 'userId',
-            key: 'userId',
-        },
         {
             title: 'id',
             dataIndex: 'id',
             key: 'id',
         },
         {
-            title: 'title',
-            dataIndex: 'title',
-            key: 'title',
+            title: 'name',
+            dataIndex: 'name',
+            key: 'name',
         },
         {
-            title: 'body',
-            dataIndex: 'body',
-            key: 'body',
+            title: 'email',
+            dataIndex: 'email',
+            key: 'email',
+        },
+        {
+            title: 'address',
+            dataIndex: 'address',
+            key: 'address',
+        },
+        {
+            title: 'phone',
+            dataIndex: 'phone',
+            key: 'phone',
+        },
+        {
+            title: 'profile_image',
+            dataIndex: 'profile_image',
+            key: 'profile_image',
         },
         {
             title : "actions",
             dataIndex : "actions",
             key : "actions",
             render:(text,record)=>
-            <div style={{display : "flex", alignItems : "center", justifyContent : "center", gap : "10px"}} >
-                <Link to = {`/users/show/${record.id}`}>show</Link> 
-                <Link to = {`/users/edit/${record.id}`}>edit</Link> 
-                <Button onClick={() => deleter(record.id)}>remove</Button> 
-            </div>
-            
-        },
+                <Button icon={<FaEye style={{fontSize:"18px"}}/>} onClick={()=>{navigate(`/users/show/${record.id}`)}}/>
+        }
         
         ];
+        const token  = '154|1LGtpbpOXYEZWZjaAzXlTqZFvafiLLCEaHATF2er8e83eecc'
 
         useEffect(()=>{
-
-
-
-            axios.get("https://jsonplaceholder.typicode.com/posts").then((res) => {
-                setData(res.data)
+            setLoading(true)
+            axios.get("https://backend.profferdeals.com/api/admin/users",{
+                headers:{
+                    Authorization:`Bearer ${token}`
+                  }
+            }).then((res) => {
+                setData(res.data.data)
+                setLoading(false)
     
             }).catch(() =>{})
         } , [])
@@ -64,10 +73,9 @@ const Users = () => {
         
     return (
         <div>
-            
             <h1>Users</h1>
-            <Link to = "/add"><button style={{cursor : "pointer", border : "none", color : "white", backgroundColor : "blue"}}> + Add a new User</button></Link>
-            <Table dataSource={data} columns={columns}  style={{marginTop : "20px", width : "95%"}}  />;
+            <Button type='primary' onClick={()=>{navigate("/users/add")}}> + Add a new User</Button>
+            <Table loading={loading} dataSource={data} columns={columns}  style={{marginTop : "20px", width : "98%"}}  />
         </div>
     )
 }

@@ -25,6 +25,12 @@ const Setting = () => {
             setValue(e.target.value);
         }
 
+        const [val, setVal] = useState(1);
+        const onchanger = (e) => {
+            console.log('radio checked', e.target.value);
+            setVal(e.target.value);
+        }
+
 
         const [change , setChange] =useState(false);
 
@@ -127,30 +133,15 @@ const Setting = () => {
                             <h2>Widgets Control</h2>
                             <p>Show/Hide Widgets</p>
                             <div className="widg">
-                                <div>
-                                    <input type="checkbox" name="" id="Quick Draft" checked />
-                                    <label for="Quick Draft">Quick Draft</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" name="" id="Yearly Targets" checked />
-                                    <label for="Yearly Targets">Yearly Targets</label>  
-                                </div>
-                                <div>
-                                    <input type="checkbox" name="" id="Tickets Statistics" checked />
-                                    <label for="Tickets Statistics">Tickets Statistics</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" name="" id="Latest News" checked />
-                                    <label for="Latest News">Latest News</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" name="" id="Latest Tasks" />
-                                    <label for="Latest Tasks">Latest Tasks</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" name="" id="Top Search Items" checked />
-                                    <label for="Top Search Items">Top Search Items</label>
-                                </div>
+                                <Radio.Group onChange={onchanger} value={val}>
+                                    <Space direction="vertical">
+                                        <Radio value={1}>Quick Draft</Radio>
+                                        <Radio value={2}>Yearly Targets</Radio>
+                                        <Radio value={3}>Tickets Statistics</Radio>
+                                        <Radio value={4}>Latest News</Radio>
+                                        <Radio value={5}>Top Search Items</Radio>
+                                    </Space>
+                                </Radio.Group>
                             </div>
                         </div>
                         <div className="slide">

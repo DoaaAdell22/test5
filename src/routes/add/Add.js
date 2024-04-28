@@ -71,7 +71,7 @@ const Add = () => {
             <lable>Password :</lable>
             <input name='password' type='password' placeholder='please write a password' value={password} onChange={(e) => setPassword(e.target.value)}/>
             <br/>
-            <input type='submit'    value="save" style={{color: "#d2691e", border : "none", backgroundColor : "white", padding : "10px"}}  />
+            <input type='submit' value="save" style={{color: "#3fc7cc", border : "none", backgroundColor : "white", padding : "10px"}}  />
             {loading ? <AiOutlineLoading3Quarters /> :  "" }
           </form>
         </div>

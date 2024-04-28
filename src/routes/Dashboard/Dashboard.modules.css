@@ -11,7 +11,7 @@
 .Body .Boxs {
     margin-top: 20px   ;
     display: grid;
-    grid-template-columns: repeat(2 , auto);
+    grid-template-columns: repeat(2 , 550px);
     grid-template-rows: repeat(12 , auto);
     gap: 20px ;
     
@@ -639,20 +639,6 @@
     font-size: 14px;
 }
 
-/* .Boxs .slide .social .followers a{
-    background-color: #4492eb;
-}
-
-.Boxs .slide .social .like a{
-    background-color: #378ae9;
-}
-.Boxs .slide .social .subs a{
-    background-color: #df1a1a;
-}
-.Boxs .slide .social .in a{
-    background-color: #3071bb;
-} */
-
 
 .Body .Boxs :nth-child(13){
     grid-column: 1/3;
@@ -706,6 +692,3 @@
 .Boxs .slide table tbody :nth-child(5) div{
     background-color: #df1a1a;
 }
-/* .Boxs .slide table tbody :nth-child(6) div{
-    background-color: #24c060;
-} */

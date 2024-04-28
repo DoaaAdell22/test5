@@ -12,12 +12,18 @@ const Usersdata = () => {
   const params = useParams()
   
 
+  const token  = '154|1LGtpbpOXYEZWZjaAzXlTqZFvafiLLCEaHATF2er8e83eecc'
 
   useEffect(()=>{
 
-axios.get(`https://jsonplaceholder.typicode.com/posts/${params.id}`).then((res)=>{
-  
-  setValue(res.data)
+axios.get(`https://backend.profferdeals.com/api/admin/users/${params.id}`,{
+  headers : {
+      Authorization : `Bearer ${token}`
+  }
+}).then((res)=>{
+
+  console.log(res)
+  setValue(res.data.data)
 }).catch(()=>{
 
 })
@@ -32,27 +38,35 @@ axios.get(`https://jsonplaceholder.typicode.com/posts/${params.id}`).then((res)=
     },
     {
       key: '2',
-      label: 'userId',
-      children: value.userId,
+      label: 'name',
+      children: value.name,
     },
     {
       key: '3',
-      label: 'title',
-      children: value.title,
+      label: 'email',
+      children: value.email,
     },
     {
       key: '4',
-      label: 'body',
-      children: value.body,
+      label: 'address',
+      children: value.address,
+    },
+    {
+      key: '5',
+      label: 'phone',
+      children: value.phone,
+    },
+    {
+      key: '5',
+      label: 'profile_image',
+      children: value.profile_image,
     }
   ];
   return (
     <div>
         
-          <div className='user'>
-
+        <div className='user'>
               <Descriptions className='description' title="User Info" items={items}  />
-
         </div>
     </div>
   )

@@ -5,7 +5,6 @@ import { useParams } from 'react-router-dom'
 import { FaUser } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom'
 import {Toaster , toast } from 'react-hot-toast';
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { Button } from 'antd';
 
 const Edituser = () => {
@@ -20,10 +19,14 @@ const Edituser = () => {
         return navigate(-1)
       }
       
-
+const token  = '154|1LGtpbpOXYEZWZjaAzXlTqZFvafiLLCEaHATF2er8e83eecc'
   useEffect(()=>{
 
-axios.get(`https://jsonplaceholder.typicode.com/posts/${params.id}`).then((res)=>{
+axios.get(`https://backend.profferdeals.com/api/admin/users/posts/${params.id}`,{
+  headers:{
+    Authorization:`Bearer ${token}`
+  }
+}).then((res)=>{
   
 // setState(res.data)
 settitle(res.data.title)
@@ -70,7 +73,7 @@ setbody(res.data.body)
                     <lable>body :</lable>
                     <input name='body' value={body} onChange={(e) => setbody(e.target.value)}  />
                     <br />
-                    <Button loading={loading} htmlType='submit'   style={{color: "#d2691e", border : "none", backgroundColor : "white", padding : "10px"}}  >Save</Button>
+                    <Button loading={loading} htmlType="submit"style={{color: "#3fc7cc", border : "none", backgroundColor : "white"}} >Save</Button>
                 </form>
             </div>
         </div>

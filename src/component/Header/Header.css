@@ -12,38 +12,6 @@
 
 }
 
-.index .header .search::before {
-    position: absolute;
-    font-family: var(--fa-style-family-classic);
-    content: "\f002";
-    font-weight: 900;
-    color: #ccc;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.index .header .search input {
-    font-size: 12px;
-    height: 30px;
-    width: 160px;
-    color: #777;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    margin-left: 5px;
-    padding-left: 30px;
-    transition: width 0.3s;
-}
-
-
-.index .header .search input:focus{
-    width: 200px;
-}
-
-.header .search input:focus::placeholder {
-    opacity: 0;
-  }
-
 .index .header .icons {
     display: flex;
     align-items: center;
@@ -57,7 +25,7 @@
 
 .index .header .icons .notiv::before {
     content: "";
-    background-color: red;
+    background-color: #3fc7cc;
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -70,10 +38,3 @@
     width: 30px;
 }
 
-.index .header .icons .car {
-    margin-right: 15px;
-    background-color: #cf9e20;
-    color: white;
-    padding: 3px;
-    border-radius: 10px;
-}

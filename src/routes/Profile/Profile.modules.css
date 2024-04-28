@@ -51,9 +51,9 @@ p {
 }
 .Body .Box-profile .slide .profile .avatar .rate{
     width: 60%;
-    background-image: linear-gradient(to right , #32a38b 70% , #eee 1%);
     height: 5px;
     margin: auto;
+    
 }
 
 .Body .Box-profile .slide .profile .avatar .star .istar{

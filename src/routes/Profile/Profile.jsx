@@ -1,5 +1,10 @@
 import React from 'react'
 import { CiStar } from "react-icons/ci";
+import { CheckOutlined, CloseOutlined } from '@ant-design/icons';
+import { Space, Switch } from 'antd';
+import { Flex, Progress } from 'antd';
+
+
 import "./Profile.modules.css"
 
 const Profile = () => {
@@ -14,7 +19,10 @@ const Profile = () => {
                                     <img src="../media/avatar.png" alt="" />
                                     <h3>Osama Elzero</h3>
                                     <p>Level 20</p>
-                                    <div className="rate"></div>
+                                    <div className='rate'>
+                                        <Progress percent={70}  />
+                                    </div>
+                                    <br />
                                     <div className="star">
                                         <CiStar className='istar'/>
                                         <CiStar className='istar'/>
@@ -32,10 +40,14 @@ const Profile = () => {
                                             <div><span>Gender:</span> Male</div>
                                             <div><span>Country:</span> Egypt</div>
                                         </div>
-                                        <label >
-                                            <input className="checkbox" type="checkbox" checked />
-                                            <div className="button"></div>
-                                        </label>
+                                        <br />
+                                        <Space direction="vertical">
+                                            <Switch
+                                            defaultChecked
+                                            checkedChildren ={<CheckOutlined />}
+                                            unCheckedChildren={<CloseOutlined />}
+                                            />
+                                        </Space>
                                     </div>
                                     <hr />
                                     <div className="gene">
@@ -45,10 +57,14 @@ const Profile = () => {
                                             <div><span>Phone:</span> 019123456789</div>
                                             <div><span>Date Of Birth:</span> 25/10/1982</div>
                                         </div>
-                                        <label >
-                                            <input className="checkbox" type="checkbox" />
-                                            <div className="button"></div>
-                                        </label>
+                                        <br />
+                                        <Space direction="vertical">
+                                            <Switch
+                                            defaultChecked
+                                            checkedChildren ={<CheckOutlined />}
+                                            unCheckedChildren={<CloseOutlined />}
+                                            />
+                                        </Space>
                                     </div>
                                     <hr />
                                     <div className="gene">
@@ -58,10 +74,14 @@ const Profile = () => {
                                             <div><span>Programming Language:</span> Python</div>
                                             <div><span>Years Of Experience:</span> 15+</div>
                                         </div>
-                                        <label >
-                                            <input className="checkbox" type="checkbox" checked />
-                                            <div className="button"></div>
-                                        </label>
+                                        <br />
+                                        <Space direction="vertical">
+                                            <Switch
+                                            defaultChecked
+                                            checkedChildren ={<CheckOutlined />}
+                                            unCheckedChildren={<CloseOutlined />}
+                                            />
+                                        </Space>
                                     </div>
                                     <hr />
                                     <div className="gene">
@@ -71,10 +91,14 @@ const Profile = () => {
                                             <div><span>Email:</span> email@website.com</div>
                                             <div><span>Subscription:</span> Monthly</div>
                                         </div>
-                                        <label >
-                                            <input className="checkbox" type="checkbox" />
-                                            <div className="button"></div>
-                                        </label>
+                                        <br />
+                                        <Space direction="vertical">
+                                            <Switch
+                                            defaultChecked
+                                            checkedChildren ={<CheckOutlined />}
+                                            unCheckedChildren={<CloseOutlined />}
+                                            />
+                                        </Space>
                                     </div>
                                 </div>
                             </div>
