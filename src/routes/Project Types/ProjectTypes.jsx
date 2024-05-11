@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import {  Table, Button } from "antd";
 import axios from 'axios';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import {  useNavigate, useParams } from 'react-router-dom';
 import { FaEye } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
-import {Toaster , toast } from 'react-hot-toast';
+import { toast } from 'react-hot-toast';
 
 
 const ProjectTypes = () => {
@@ -51,8 +51,6 @@ const navigate = useNavigate()
         },
         
         ];
-
-
         const repeat = () => {
             setLoading(true)
             axios.get("https://backend.profferdeals.com/api/admin/project-types",{
@@ -62,18 +60,12 @@ const navigate = useNavigate()
             }).then((res) => {
             setTypes(res.data.data)
                 setLoading(false)
-            }).catch(() =>{})
+            }).catch((err) =>{ toast.error(err.data.message)})
                 }
-
-
-
+                
         useEffect(()=>{
             repeat()
         } , [])
-
-
-
-
         const delHandler = (id) => {
             setselectedId(id)
             axios.delete(`https://backend.profferdeals.com/api/admin/project-types/${id}` , {

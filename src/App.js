@@ -1,4 +1,3 @@
-
 import './App.css';
 import "./component/Header/Header.css"
 import { createBrowserRouter , RouterProvider } from 'react-router-dom';
@@ -23,7 +22,11 @@ import ShowContractors from './routes/ShowContractors/ShowContractors';
 import ProjectTypes from './routes/Project Types/ProjectTypes';
 import Showprojects from './routes/Showprojects/Showprojects';
 import Addproject from './routes/Addproject/Addproject';
+import Login from './routes/Login/Login'
 import {Toaster  } from 'react-hot-toast';
+import { Provider } from 'react-redux';
+import store from './Redu/Store'
+import { createStore } from 'redux';
 
 
 
@@ -63,7 +66,6 @@ const routes = createBrowserRouter([
       },
       {
         path : "users",
-
         children:[
           {
             path : "" ,
@@ -97,7 +99,6 @@ const routes = createBrowserRouter([
           },
         ]
       },
-      
       {
         path : "ProjectTypes",
         children : [
@@ -114,12 +115,12 @@ const routes = createBrowserRouter([
             element : <Addproject />
           }
         ]
-      },
-     
-      
-      
-      
+      }
     ]
+  },
+  {
+      path : 'login' ,
+      element : <Login />
   }
 ])
 
@@ -127,10 +128,12 @@ console.log(window.location.href)
 
 function App() {
   return (
-    <div className="app">
-      <Toaster/>
-      <RouterProvider router={routes} />
-    </div>
+    <Provider store={store}> 
+      <div className="app">
+        <Toaster/>
+        <RouterProvider router={routes} />
+      </div>
+    </Provider>  
   );
 }
 

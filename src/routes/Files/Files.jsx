@@ -7,7 +7,6 @@ import { AiOutlineFileWord } from "react-icons/ai";
 import { BsFiletypeCsv } from "react-icons/bs";
 import {Link} from "react-router-dom"
 
-
 const Files = () => {
 
     const cardFiles = [
@@ -89,8 +88,6 @@ const Files = () => {
             size : "2.7MB"
         }
     ]
-
-
   return (
             <div>
                     <h1>Files</h1>

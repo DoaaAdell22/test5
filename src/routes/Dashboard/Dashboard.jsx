@@ -10,11 +10,17 @@ import { Fragment, useState } from 'react';
 import { MdDoneOutline } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
 import { FaRegComment } from "react-icons/fa";
+import {  useSelector } from 'react-redux';
+import {useEffect} from 'react'
+import { useNavigate } from 'react-router-dom'
 
 
 
 
 const Dashboard = () => {
+
+    const navigate = useNavigate()
+
     const [like , setLike] =useState(false)
     const [social , setSocial ] =useState(false)
     const [save , setSave] = useState(false);
@@ -43,7 +49,7 @@ const Dashboard = () => {
         ]
     
     )
-
+    
     const remover = (event , clickedIdx) =>{
         const delethandler = task.filter((el , idx) => idx !== clickedIdx);
         setTask(delethandler);
@@ -96,6 +102,16 @@ const Dashboard = () => {
         setLike(!like)
     } 
 
+
+    const token = useSelector(state => state.token);
+
+    useEffect(()=>{
+
+        if(!token){
+            navigate('Login')
+        }
+
+    } , [token ])
     return (
         <div>
             <h1>Dashboard</h1>

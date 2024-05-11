@@ -5,10 +5,7 @@ import { FaRegFile } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 import { FaUserFriends } from "react-icons/fa";
 import { FaHardHat } from "react-icons/fa";
-
 import { useLocation } from 'react-router-dom';
-
-
 
 const options = [ 
     {
@@ -69,7 +66,6 @@ const options = [
 
 ]
 
-
 const Sidebar = () => {
     const { pathname } = useLocation();
 console.log({pathname})
@@ -93,7 +89,6 @@ console.log({pathname})
                     } 
                 )
                 }
-                    
                 </ul>
         </div>
     </div>

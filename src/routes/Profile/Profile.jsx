@@ -1,13 +1,16 @@
-import React from 'react'
-import { CiStar } from "react-icons/ci";
+import React , {useState} from 'react'
 import { CheckOutlined, CloseOutlined } from '@ant-design/icons';
 import { Space, Switch } from 'antd';
-import { Flex, Progress } from 'antd';
-
-
+import {  Progress } from 'antd';
+import { Flex, Rate } from 'antd';
 import "./Profile.modules.css"
 
+const desc = ['terrible', 'bad', 'normal', 'good', 'wonderful'];
+
 const Profile = () => {
+
+    const [value, setValue] = useState(3);
+
     return (
                 <div>
                     <h1>Profile</h1>
@@ -24,11 +27,10 @@ const Profile = () => {
                                     </div>
                                     <br />
                                     <div className="star">
-                                        <CiStar className='istar'/>
-                                        <CiStar className='istar'/>
-                                        <CiStar  className='istar'/>
-                                        <CiStar className='istar'/>
-                                        <CiStar className='istar'/>
+                                        <Flex gap="middle" vertical>
+                                            <Rate tooltips={desc} onChange={setValue} value={value}  />
+                                            {value ? <span>{desc[value - 1]}</span> : null}
+                                        </Flex>
                                     </div>
                                     <span>550 Rating</span>
                                 </div>

@@ -5,14 +5,11 @@ import { CiCircleInfo } from "react-icons/ci";
 import { FaXmark } from "react-icons/fa6";
 import Slide1 from '../../component/plans/Slide1';
 
-
 const Plans = () => {
-
 
 const styles = {
     color : "white"
 }   
-
 
     const plans = [
         {
@@ -152,7 +149,7 @@ const styles = {
         }
     ]
 
-  return (
+    return (
                 <div>
                     <h1>Plans</h1>
                     <div className="div1"></div>

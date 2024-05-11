@@ -3,13 +3,27 @@ import "./Header.css"
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { AudioOutlined } from '@ant-design/icons';
 import { Input, Space } from 'antd';
+import { useDispatch } from 'react-redux';
+import  {removeToken}  from '../../Redu/Action';
+import { Button, Tooltip } from 'antd';
+import { IoMdLogOut } from "react-icons/io";
+
+
+
+
 
 
 
 const Header = () => {
 
+  const dispatch = useDispatch();
 
+  
+  const z = () => {
+    dispatch(removeToken());
+};
 const { Search } = Input;
+
 const suffix = (
   <AudioOutlined
     style={{
@@ -22,27 +36,31 @@ const suffix = (
 const onSearch = (value, _e, info) => console.log(info?.source, value);
 
   return (
-    <div >
-        <div class="header">
-            <div class="search">
-                <Space direction="vertical">
-                <Search
-                placeholder="input search text"
-                onSearch={onSearch}
-                style={{
+    
+      <div >
+          <div className="header">
+              <div className="search">
+                  <Space direction="vertical">
+                  <Search
+                  placeholder="input search text"
+                  onSearch={onSearch}
+                  style={{
                     width: 200,
-                }}
-                />
-                </Space>
-            </div>
-            <div class="icons">
-                <div class="notiv">
-                    <IoMdNotificationsOutline />
-                </div>
-                <img src="../media/avatar.png" alt="" />
-            </div>
-        </div>
-    </div>
+                  }}
+                  />
+                  </Space>
+              </div>
+              <div className="icons">
+                  <div className="notiv">
+                      <IoMdNotificationsOutline />
+                  </div>
+                  <img src="../media/avatar.png" alt=""  />
+                  <Tooltip title="Logout">
+                    <Button style={{backgroundColor : '#3fc7cc', marginRight : '10px'}} onClick={z} type="primary" shape="circle" icon={<IoMdLogOut style={{fontSize : '16px'}} />} />
+                  </Tooltip>
+              </div>
+          </div>
+      </div>
   )
 }
 

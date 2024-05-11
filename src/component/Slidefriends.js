@@ -15,8 +15,7 @@ const Slidefriends = ({img , name , job , info1 , info2 , info3 , Date , handler
         
             setCaller(true)
         }
- 
-    
+
   return (
         <div>
                 <div className="slide">

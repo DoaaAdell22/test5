@@ -24,11 +24,8 @@ const Addproject = () => {
             <div className='form'>
                 <form onSubmit={(e) =>{
                     e.preventDefault()
-
                     const {name_en , name_ar } = e.target
-
                     const formData = new FormData(e.target)
-
                     const token  = '154|1LGtpbpOXYEZWZjaAzXlTqZFvafiLLCEaHATF2er8e83eecc'
                     setLoading(true)
                     axios.post("https://backend.profferdeals.com/api/admin/project-types" ,formData ,  {
@@ -43,7 +40,6 @@ const Addproject = () => {
                     }).finally(()=>{
                         setLoading(false)
                     })
-
                 }}>
                     <FaDiagramProject style={{fontSize : "25px"}}  />
                     <h1 style={{marginTop : "-10px"}}>New project</h1>

@@ -2,6 +2,7 @@ import React from 'react'
 import "./Project.modules.css"
 import { Link } from 'react-router-dom'
 const Project = () => {
+
   return (
         <div>
             <h1>Projects</h1>
@@ -17,11 +18,11 @@ const Project = () => {
                                 </div>
                                 <br />
                                 <div className="team">
-                                    <Link href="#"><img decoding="async" src="../media/team-01.png" alt="" /></Link>
-                                    <Link href="#"><img decoding="async" src="../media/team-02.png" alt="" /></Link>
-                                    <Link href="#"><img decoding="async" src="../media/team-03.png" alt="" /></Link>
-                                    <Link href="#"><img decoding="async" src="../media/team-04.png" alt="" /></Link>
-                                    <Link href="#"><img decoding="async" src="../media/team-05.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-01.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-02.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-03.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-04.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-05.png" alt="" /></Link>
                                 </div>
                                 <hr />
                                 <div className="jobs">
@@ -48,9 +49,9 @@ const Project = () => {
                                 </div>
                                 <br />
                                 <div className="team">
-                                    <Link href="#"><img decoding="async" src="../media/team-01.png" alt="" /></Link>
-                                    <Link href="#"><img decoding="async" src="../media/team-02.png" alt="" /></Link>
-                                    <Link href="#"><img decoding="async" src="../media/team-03.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-01.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-02.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-03.png" alt="" /></Link>
                                     
                                 </div>
                                 <hr />
@@ -77,9 +78,9 @@ const Project = () => {
                                 </div>
                                 <br />
                                 <div className="team">
-                                    <Link href="#"><img decoding="async" src="../media/team-01.png" alt="" /></Link>
-                                    <Link href="#"><img decoding="async" src="../media/team-02.png" alt="" /></Link>
-                                    <Link href="#"><img decoding="async" src="../media/team-03.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-01.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-02.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-03.png" alt="" /></Link>
                                     
                                 </div>
                                 <hr />
@@ -104,10 +105,10 @@ const Project = () => {
                                 </div>
                                 <br />
                                 <div className="team">
-                                    <Link href="#"><img decoding="async" src="../media/team-01.png" alt="" /></Link>
-                                    <Link href="#"><img decoding="async" src="../media/team-02.png" alt="" /></Link>
-                                    <Link href="#"><img decoding="async" src="../media/team-03.png" alt="" /></Link>
-                                    <Link href="#"><img decoding="async" src="../media/team-04.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-01.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-02.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-03.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-04.png" alt="" /></Link>
                                 </div>
                                 <hr />
                                 <div className="jobs">
@@ -134,9 +135,9 @@ const Project = () => {
                                 </div>
                                 <br />
                                 <div className="team">
-                                    <Link href="#"><img decoding="async" src="../media/team-01.png" alt="" /></Link>
-                                    <Link href="#"><img decoding="async" src="../media/team-02.png" alt="" /></Link>
-                                    <Link href="#"><img decoding="async" src="../media/team-03.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-01.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-02.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-03.png" alt="" /></Link>
                                 </div>
                                 <hr />
                                 <div className="jobs">
@@ -161,9 +162,9 @@ const Project = () => {
                                 </div>
                                 <br />
                                 <div className="team">
-                                    <Link href="#"><img decoding="async" src="../media/team-01.png" alt="" /></Link>
-                                    <Link href="#"><img decoding="async" src="../media/team-02.png" alt="" /></Link>
-                                    <Link href="#"><img decoding="async" src="../media/team-03.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-01.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-02.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-03.png" alt="" /></Link>
                                 </div>
                                 <hr />
                                 <div className="jobs">
@@ -185,10 +186,10 @@ const Project = () => {
                                 </div>
                                 <br />
                                 <div className="team">
-                                    <Link href="#"><img decoding="async" src="../media/team-01.png" alt="" /></Link>
-                                    <Link href="#"><img decoding="async" src="../media/team-02.png" alt="" /></Link>
-                                    <Link href="#"><img decoding="async" src="../media/team-03.png" alt="" /></Link>
-                                    <Link href="#"><img decoding="async" src="../media/team-04.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-01.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-02.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-03.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-04.png" alt="" /></Link>
                                     
                                 </div>
                                 <hr />
@@ -214,9 +215,9 @@ const Project = () => {
                                 </div>
                                 <br />
                                 <div className="team">
-                                    <Link href="#"><img decoding="async" src="../media/team-01.png" alt="" /></Link>
-                                    <Link href="#"><img decoding="async" src="../media/team-02.png" alt="" /></Link>
-                                    <Link href="#"><img decoding="async" src="../media/team-03.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-01.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-02.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-03.png" alt="" /></Link>
                                 
                                 </div>
                                 <hr />
@@ -240,9 +241,9 @@ const Project = () => {
                                 </div>
                                 <br />
                                 <div className="team">
-                                    <Link href="#"><img decoding="async" src="../media/team-01.png" alt="" /></Link>
-                                    <Link href="#"><img decoding="async" src="../media/team-02.png" alt="" /></Link>
-                                    <Link href="#"><img decoding="async" src="../media/team-03.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-01.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-02.png" alt="" /></Link>
+                                    <Link to="#"><img decoding="async" src="../media/team-03.png" alt="" /></Link>
                                     
                                 </div>
                                 <hr />

@@ -64,7 +64,6 @@ axios.get(`https://backend.profferdeals.com/api/admin/users/${params.id}`,{
   ];
   return (
     <div>
-        
         <div className='user'>
               <Descriptions className='description' title="User Info" items={items}  />
         </div>

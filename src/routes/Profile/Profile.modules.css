@@ -56,7 +56,7 @@ p {
     
 }
 
-.Body .Box-profile .slide .profile .avatar .star .istar{
+.Body .Box-profile .slide .profile .avatar .star {
     color: #e79e16;
     margin: 10px 0;
 }

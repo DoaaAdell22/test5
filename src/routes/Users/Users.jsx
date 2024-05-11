@@ -3,6 +3,7 @@ import { Button, Table } from "antd";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { FaEye } from "react-icons/fa";
+import { toast } from 'react-hot-toast';
 
 
 const Users = () => {
@@ -56,21 +57,18 @@ const Users = () => {
         
         ];
         const token  = '154|1LGtpbpOXYEZWZjaAzXlTqZFvafiLLCEaHATF2er8e83eecc'
-
         useEffect(()=>{
             setLoading(true)
             axios.get("https://backend.profferdeals.com/api/admin/users",{
                 headers:{
                     Authorization:`Bearer ${token}`
-                  }
+                            }
             }).then((res) => {
                 setData(res.data.data)
                 setLoading(false)
-    
-            }).catch(() =>{})
+            }).catch((err) =>{toast.error(err.data.message)})
         } , [])
     
-        
     return (
         <div>
             <h1>Users</h1>
