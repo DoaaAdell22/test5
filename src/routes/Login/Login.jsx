@@ -76,13 +76,8 @@ const Login = () => {
                         </Space> 
                         <br />   
                         <Button  type="primary" htmlType='submit'> Login</Button>
-                        <p >You Dont have an account? <Link style={{textDecoration : 'underline' }}> Create new account</Link></p>
-                        <hr style={{width : '250px'}}/>
-                        <h5 style={{textAlign : 'center'}}>Login with</h5>
-                        <div className='Log'>
-                            <Button style={{backgroundColor : 'white'}}type="primary" shape="circle" icon={<FcGoogle style={{fontSize : '19px'}} />}></Button>
-                            <Button style={{backgroundColor : 'white'}}type="primary" shape="circle" icon={<BsTwitterX    style={{fontSize : '19px', color : 'black'}} />}></Button>
-                        </div>
+                        
+                        
                     </div>
                 </form>
             </div>
