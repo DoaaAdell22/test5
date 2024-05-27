@@ -6,12 +6,11 @@ import { FaRegCircleCheck } from "react-icons/fa6";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { FaTwitter , FaFacebookF , FaYoutube , FaLinkedin  } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import { Fragment, useState } from 'react';
+import { Fragment, useLayoutEffect, useState } from 'react';
 import { MdDoneOutline } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
 import { FaRegComment } from "react-icons/fa";
 import {  useSelector } from 'react-redux';
-import {useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
 
 
@@ -105,13 +104,12 @@ const Dashboard = () => {
 
     const token = useSelector(state => state.token);
 
-    useEffect(()=>{
+    
+    if(!token){
+        navigate('Login')
+    }
+    
 
-        if(!token){
-            navigate('Login')
-        }
-
-    } , [token ])
     return (
         <div>
             <h1>Dashboard</h1>

@@ -29,14 +29,11 @@ const Login = () => {
         dispatch(tokener(token));
     };
 
-    useEffect(()=>{
 
-        if(token){
-            navigate('/')
-        }
 
-    } , [token])
-
+    if(token){
+        navigate('/')
+    }
 
 
     return (
