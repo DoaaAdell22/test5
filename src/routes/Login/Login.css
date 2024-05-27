@@ -2,35 +2,28 @@
     width : 410px; 
     height : 400px ;
     position : absolute;
-    left : 80% ;
+    left : 50% ;
     top : 50% ;
     transform : translate(-50% , -50%) ;
     border : 1px solid #eee ;
     border-radius : 10px;
-    padding : 30px ;
+    padding : 40px ;
     box-shadow : 1px 1px 20px 0px #eee ;
-}
-
-.bod{
-    background-color: black;
-    /* background-image: url("https://img.freepik.com/free-photo/top-view-arrangement-natural-material-stationery_23-2148898233.jpg?size=626&ext=jpg&ga=GA1.1.553209589.1715299200&semt=ais_user"); */
+    text-align: center;
 }
 
 form lable {
     font-weight: bold;
 }
-.inp {
-    
-}
+
 .inp p {
     font-size: 13px;
-    
 }
 
 .inp .Log {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     align-items: center;
     font-size: 19px;
 }

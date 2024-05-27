@@ -74,7 +74,7 @@ const Login = () => {
                         <Space direction="vertical">
                             <Input.Password name='password' placeholder="input password" onChange={(e) => setPassword(e.target.value)} value={password} style={{margin : '15px 0' , width : '300px'}} />
                         </Space> 
-                        <br />   
+                        <br />
                         <Button  type="primary" htmlType='submit'> Login</Button>
                         
                         
