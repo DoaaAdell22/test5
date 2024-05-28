@@ -65,7 +65,8 @@
     margin-bottom: 5px;
 }
 .Boxs-setting .slide form div input {
-    width: 100%;
+    margin-left: -5px;
+    width: 95%;
     margin-bottom: 15px ;
     padding: 10px;
     border: 1px solid #eee;

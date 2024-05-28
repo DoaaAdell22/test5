@@ -14,7 +14,6 @@
     grid-template-columns: repeat(2 , 1fr);
     grid-template-rows: repeat(8 , auto);
     gap: 20px ;
-    
 }
 
 
@@ -278,16 +277,15 @@
 }
 
 .Boxs .slide .tickets {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 15px;
 }
 .Boxs .slide .tickets .t1,
 .t2,
 .t3,
 .t4 {
     text-align: center;
-    width: 250px;
     padding:  10px ;
     border: #eee 2px solid;
     border-radius: 6px;
