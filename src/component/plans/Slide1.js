@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import "./Plans.modules.css"
 import { FaCheck } from "react-icons/fa6";
 import { CiCircleInfo } from "react-icons/ci";
 import { FaXmark } from "react-icons/fa6";
 const Slide1 = ({title , price ,color , features}) => {
   return (
-    <div>
+        <div>
             <div className="slide">
                 <div className="plan" style={{backgroundColor : color , outlineColor : color } } >
                         <h3>{title}</h3>
@@ -13,7 +13,7 @@ const Slide1 = ({title , price ,color , features}) => {
                             </div>
                             <div className="features">
                                 {features.map((el)=> 
-                                    <>
+                                    <Fragment>
                                         <div className="feat">
                                             <div className="text">
                                                 {el.isRight ? <FaCheck id="gr" /> : <FaXmark id="re" />}
@@ -24,15 +24,13 @@ const Slide1 = ({title , price ,color , features}) => {
                                             </div>
                                         </div>
                                         <hr />
-                                    </>
-                                )  }
+                                    </Fragment>
+                                )}
                             </div>
-                            
-                                
                             <button className="button" style={{backgroundColor : color}}>Join</button>
-                        </div>
-    </div>
-  )
+            </div>
+        </div>
+    )
 }
 
 export default Slide1

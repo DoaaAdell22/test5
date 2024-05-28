@@ -1,8 +1,8 @@
 .index .sidbar{
+    box-sizing: border-box;
     position: relative;
     background-color: white;
     box-shadow: 1px 1px 9px 0px #eee;
-    width: 200px;
 }
 
 
@@ -42,7 +42,7 @@ padding: 20px;
 .sidbar ul{
     margin: 0px;
     padding: 12px;
-    height: calc(100vh - 65px);
+    height: calc(100vh - 66px);
     overflow: auto;
     width: 100%;
 }

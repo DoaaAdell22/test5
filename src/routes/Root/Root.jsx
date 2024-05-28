@@ -11,9 +11,7 @@ const Root = () => {
             <div className='content'>
                 <Header />
                 <div className='Body'>
-                    <div className='container'>
                         <Outlet />
-                    </div>
                 </div>
             </div>
         </div>

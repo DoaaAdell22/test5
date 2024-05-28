@@ -26,16 +26,21 @@ ul{
 }
 
 .content {
-    width: 100%;
-    overflow: auto;
+    width: calc(100% - 250px);
+    overflow: hidden;
     height: 100vh;
 }
 
 .Body {
     background-color: #f1f5f9;
-    min-height: 100vh;
+    height: calc(100vh - 33px - 1rem);
+    padding: 0 1rem 1rem;
+    overflow: auto;
 }
-
-.Body .container{
-    padding-left: 15px;
+.sidbar{
+    height: 100vh;
+    width: 250px;
+}
+.header{
+    border-bottom: 1px solid #eee;
 }

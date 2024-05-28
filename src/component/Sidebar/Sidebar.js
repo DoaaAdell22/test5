@@ -70,7 +70,6 @@ const Sidebar = () => {
     const { pathname } = useLocation();
 console.log({pathname})
   return (
-    <div>
         <div className="sidbar">
                 <div><h3>Elzero</h3></div>
                 <ul>
@@ -91,7 +90,6 @@ console.log({pathname})
                 }
                 </ul>
         </div>
-    </div>
   )
 }
 
