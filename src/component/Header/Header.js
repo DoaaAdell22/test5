@@ -7,10 +7,11 @@ import { useDispatch } from 'react-redux';
 import  {removeToken}  from '../../Redu/Action';
 import { Button, Tooltip } from 'antd';
 import { IoMdLogOut } from "react-icons/io";
+import {  useNavigate } from 'react-router-dom';
 
 
 const Header = () => {
-
+  const navigate = useNavigate()
   const dispatch = useDispatch();
 
   
@@ -29,7 +30,9 @@ const suffix = (
 );
 
 const onSearch = (value, _e, info) => console.log(info?.source, value);
-
+  const profile = () =>{
+    return navigate('profile')
+  }
   return (
     
       <div >
@@ -49,7 +52,7 @@ const onSearch = (value, _e, info) => console.log(info?.source, value);
                   <div className="notiv">
                       <IoMdNotificationsOutline />
                   </div>
-                  <img src="../media/avatar.png" alt=""  />
+                  <img src="../media/avatar.png" alt="" onClick={profile} style={{cursor : 'pointer'}} />
                   <Tooltip title="Logout">
                     <Button style={{backgroundColor : '#3fc7cc', marginRight : '10px'}} onClick={z} type="primary" shape="circle" icon={<IoMdLogOut style={{fontSize : '16px'}} />} />
                   </Tooltip>
