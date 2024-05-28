@@ -1,16 +1,19 @@
+/* eslint-disable no-undef */
 import React, { useEffect, useState } from 'react'
 import { Button, Table } from "antd";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { FaEye } from "react-icons/fa";
 import { toast } from 'react-hot-toast';
-
+import { useSelector } from 'react-redux';
 
 const Users = () => {
 
     const [loading , setLoading] = useState(false)
     const [data , setData] = useState([]);
     const navigate = useNavigate()
+    const token = useSelector(state => state.token);
+
     const deleter = (elementId) =>{
         const removing = data.filter((el , idx) => el.id !== elementId );
         setData(removing)
@@ -56,7 +59,6 @@ const Users = () => {
         }
         
         ];
-        const token  = '154|1LGtpbpOXYEZWZjaAzXlTqZFvafiLLCEaHATF2er8e83eecc'
         useEffect(()=>{
             setLoading(true)
             axios.get("https://backend.profferdeals.com/api/admin/users",{

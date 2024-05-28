@@ -3,16 +3,19 @@ import React, { useEffect, useState } from 'react'
 import "./UserData.css"
 import { useParams } from 'react-router-dom'
 import{ Descriptions }from"antd"
+import {  useSelector } from 'react-redux';
 
 
 const Usersdata = () => {
+
+  
+  const token = useSelector(state => state.token);
 
   const [value , setValue] = useState({})
 
   const params = useParams()
   
 
-  const token  = '154|1LGtpbpOXYEZWZjaAzXlTqZFvafiLLCEaHATF2er8e83eecc'
 
   useEffect(()=>{
 

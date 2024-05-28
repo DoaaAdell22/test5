@@ -5,6 +5,8 @@ import {  useNavigate, useParams } from 'react-router-dom';
 import { FaEye } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { toast } from 'react-hot-toast';
+import {  useSelector } from 'react-redux';
+
 
 
 const ProjectTypes = () => {
@@ -16,7 +18,7 @@ const ProjectTypes = () => {
 const navigate = useNavigate()
     const params = useParams()
 
-    const token  = '154|1LGtpbpOXYEZWZjaAzXlTqZFvafiLLCEaHATF2er8e83eecc'
+    const token = useSelector(state => state.token);
 
     const columns = [
         {

@@ -4,14 +4,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import  tokener  from '../../Redu/Action';
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
-import {useEffect} from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Navigate, useNavigate } from 'react-router-dom'
 import './Login.css'
 import { MdEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
-import { Link } from 'react-router-dom';
-import { FcGoogle } from "react-icons/fc";
-import { BsTwitterX } from "react-icons/bs";
 
 
 
@@ -32,7 +28,7 @@ const Login = () => {
 
 
     if(token){
-        navigate('/')
+        return <Navigate to={'/'}/>
     }
 
 
@@ -47,11 +43,10 @@ const Login = () => {
 
                         const formdata = new FormData(e.target)
 
-                        const tokenn  = '154|1LGtpbpOXYEZWZjaAzXlTqZFvafiLLCEaHATF2er8e83eecc'
                     
                         axios.post("https://backend.profferdeals.com/api/admin/login" , formdata , {
                             headers : {
-                                Authorization : `Bearer ${tokenn}`
+                                Authorization : `Bearer ${token}`
                             }
                         }
                         ).then((res)=>{
@@ -72,7 +67,7 @@ const Login = () => {
                             <Input.Password name='password' placeholder="input password" onChange={(e) => setPassword(e.target.value)} value={password} style={{margin : '15px 0' , width : '300px'}} />
                         </Space> 
                         <br />
-                        <Button  type="primary" htmlType='submit'> Login</Button>
+                        <Button size='large' type="primary" htmlType='submit'> Login</Button>
                         
                         
                     </div>

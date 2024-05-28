@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import{ Descriptions }from"antd"
+import {  useSelector } from 'react-redux';
 
 const Showprojects = () => {
 
@@ -31,8 +32,8 @@ const Showprojects = () => {
             children: index.created_at,
         }
     ];
-        const token  = '154|1LGtpbpOXYEZWZjaAzXlTqZFvafiLLCEaHATF2er8e83eecc'
-        useEffect(()=>{
+    const token = useSelector(state => state.token);
+    useEffect(()=>{
             axios.get(`https://backend.profferdeals.com/api/admin/project-types/${params.id}` , {
                 headers : {
                     Authorization : `Bearer ${token}`

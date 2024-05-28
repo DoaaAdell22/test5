@@ -4,6 +4,8 @@ import { Button, Table } from "antd";
 import axios from 'axios';
 import { FaEye } from "react-icons/fa";
 import { useNavigate,  } from 'react-router-dom';
+import {  useSelector } from 'react-redux';
+
 
 const Providers = () => {
 
@@ -41,7 +43,7 @@ const Providers = () => {
         },
         
         ];
-        const token  = '154|1LGtpbpOXYEZWZjaAzXlTqZFvafiLLCEaHATF2er8e83eecc'
+        const token = useSelector(state => state.token);
         useEffect(()=>{
             setLoading(true)
             axios.get("https://backend.profferdeals.com/api/admin/contractors",{

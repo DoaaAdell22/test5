@@ -2,6 +2,8 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import{ Descriptions }from"antd"
+import {  useSelector } from 'react-redux';
+
 
 const ShowContractors = () => {
 
@@ -9,7 +11,7 @@ const ShowContractors = () => {
 
     const params = useParams()
 
-    const token  = '154|1LGtpbpOXYEZWZjaAzXlTqZFvafiLLCEaHATF2er8e83eecc'
+    const token = useSelector(state => state.token);
 
 
     useEffect(()=>{

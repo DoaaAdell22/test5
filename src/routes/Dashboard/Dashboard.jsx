@@ -6,19 +6,14 @@ import { FaRegCircleCheck } from "react-icons/fa6";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { FaTwitter , FaFacebookF , FaYoutube , FaLinkedin  } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import { Fragment, useLayoutEffect, useState } from 'react';
+import { Fragment, useState } from 'react';
 import { MdDoneOutline } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
 import { FaRegComment } from "react-icons/fa";
-import {  useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom'
-
-
 
 
 const Dashboard = () => {
 
-    const navigate = useNavigate()
 
     const [like , setLike] =useState(false)
     const [social , setSocial ] =useState(false)
@@ -102,13 +97,7 @@ const Dashboard = () => {
     } 
 
 
-    const token = useSelector(state => state.token);
 
-    
-    if(!token){
-        navigate('Login')
-    }
-    
 
     return (
         <div>
