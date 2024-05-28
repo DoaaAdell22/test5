@@ -1,6 +1,5 @@
 import React, { useState  } from 'react'
 import { useNavigate } from 'react-router-dom'
-import {FaDiagramProject} from "react-icons/fa6";
 import axios from 'axios'
 import { toast } from 'react-hot-toast';
 import {Button , Form , Input} from "antd"
@@ -9,8 +8,6 @@ import { useSelector } from 'react-redux';
 
 
 const Addproject = () => {
-    const [namear , setNamear] = useState("")
-    const [nameen , setNameen] = useState("")
     const [loading , setLoading] =useState(false)
     const token = useSelector(state => state.token);
     const navigate = useNavigate()
@@ -39,7 +36,7 @@ setLoading(true)
 }
     return (
     <div>
-        <div className='form-add'>
+        <div className='form-add' style={{paddingTop : '20px'}}>
       <Form onFinish={handleSubmit} layout='vertical'>
       <Form.Item
       rules={[
@@ -49,7 +46,7 @@ setLoading(true)
         }
       ]}
       label={"Name English"} name={"name_en"}>
-      <Input placeholder='Please Enter Name English'/>
+      <Input size='large' placeholder='Please Enter Name English'/>
       </Form.Item>
       <Form.Item
       rules={[
@@ -59,7 +56,7 @@ setLoading(true)
         }
       ]}
       label={"Name Arabic"} name={"name_ar"}>
-      <Input placeholder='Please Enter Name Arabic'/>
+      <Input size='large' placeholder='Please Enter Name Arabic'/>
       </Form.Item>
       <Button loading={loading} htmlType='submit'>Add</Button>
       </Form>
