@@ -45,11 +45,11 @@ const Users = () => {
             dataIndex: 'phone',
             key: 'phone',
         },
-        {
-            title: 'profile_image',
-            dataIndex: 'profile_image',
-            key: 'profile_image',
-        },
+        // {
+        //     title: 'profile_image',
+        //     dataIndex: 'profile_image',
+        //     key: 'profile_image',
+        // },
         {
             title : "actions",
             dataIndex : "actions",

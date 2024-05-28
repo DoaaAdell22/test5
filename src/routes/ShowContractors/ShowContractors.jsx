@@ -24,32 +24,29 @@ const ShowContractors = () => {
         }).catch((err)=>{})
     },[])
     const items = [
-        {
-          key: '1',
-          label: 'id',
-          children: state.id,
-        },
+        
         {
           key: '2',
           label: 'name',
           children: state.name,
+          span : 3
         },
         {
           key: '3',
           label: 'email',
           children: state.email,
+          span : 3
         },
         {
           key: '5',
           label: 'phone',
           children: state.phone,
+          span : 3
         },
       ];
   return (
     <div>
-        <div className='user'>
-            <Descriptions className='description' title="User Info" items={items}  />
-        </div>
+            <Descriptions bordered className='description' title="User Info" items={items}  />
     </div>
   )
 }

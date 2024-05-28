@@ -11,25 +11,24 @@ const Showprojects = () => {
     const [index , setIndex] = useState({})
 
     const items = [
-        {
-            key: '1',
-            label: 'id',
-            children: index.id,
-        },
+    
         {
             key: '2',
             label: 'name_en',
             children: index.name_en,
+            span : 3
         },
         {
             key: '3',
             label: 'name_ar',
             children: index.name_ar,
+            span : 3
         },
         {
             key: '4',
             label: 'created_at',
             children: index.created_at,
+            span : 3
         }
     ];
     const token = useSelector(state => state.token);
@@ -45,9 +44,7 @@ const Showprojects = () => {
 
     return (
     <div>
-        <div className='user'>
-            <Descriptions className='description' title="User Info" items={items}  />
-        </div>
+            <Descriptions bordered className='description' title="User Info" items={items}  />
     </div>
     )
 }

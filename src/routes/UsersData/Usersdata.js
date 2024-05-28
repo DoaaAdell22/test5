@@ -34,42 +34,41 @@ axios.get(`https://backend.profferdeals.com/api/admin/users/${params.id}`,{
 
 
   const items = [
-    {
-      key: '1',
-      label: 'id',
-      children: value.id,
-    },
+    
     {
       key: '2',
       label: 'name',
       children: value.name,
+      span : 3
     },
     {
       key: '3',
       label: 'email',
       children: value.email,
+      span : 3
     },
     {
       key: '4',
       label: 'address',
       children: value.address,
+      span : 3
     },
     {
       key: '5',
       label: 'phone',
       children: value.phone,
+      span : 3
     },
-    {
-      key: '5',
-      label: 'profile_image',
-      children: value.profile_image,
-    }
+    // {
+    //   key: '5',
+    //   label: 'profile_image',
+    //   children: value.profile_image,
+    //   span : 3
+    // }
   ];
   return (
     <div>
-        <div className='user'>
-              <Descriptions className='description' title="User Info" items={items}  />
-        </div>
+              <Descriptions bordered className='description' title="User Info" items={items}  />
     </div>
   )
 }
