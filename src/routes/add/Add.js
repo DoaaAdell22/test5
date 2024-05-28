@@ -44,7 +44,7 @@ const Add = () => {
               }
             ]}
             label={'Name'} name={"Name"}>
-            <Input placeholder='please Enter Name' />
+            <Input size='large' placeholder='please Enter Name' />
             </Form.Item>
             <Form.Item
             rules={[
@@ -54,7 +54,7 @@ const Add = () => {
               }
               ]}
               label={'Email'} name={"Email"}>
-            <Input placeholder='please Enter Email' />
+            <Input size='large' placeholder='please Enter Email' />
             </Form.Item>
             <Form.Item
             rules={[
@@ -64,7 +64,7 @@ const Add = () => {
               }
             ]}
             label={'Phone'} name={"Phone"}>
-            <Input placeholder='please Enter Phone' />
+            <Input size='large' placeholder='please Enter Phone' />
             </Form.Item>
             <Form.Item
             rules={[
@@ -74,7 +74,7 @@ const Add = () => {
               }
             ]}
             label={"Password"} name={"password"}>
-            <Input.Password placeholder='please Enter Password' />
+            <Input.Password size='large' placeholder='please Enter Password' />
             </Form.Item>
             <Button loading={loading} htmlType='submit'>Add</Button>
             </Form>
