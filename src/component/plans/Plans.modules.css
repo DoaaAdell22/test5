@@ -11,10 +11,9 @@
 .Body .Box-plan {
     margin-top: 25px;
     display: grid;
-    grid-template-columns: repeat(2 , 550px);
-    grid-template-rows: repeat(2 , auto);
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(3 , auto);
     gap: 20px;
-    
 }
 
 .Body .Box-plan  .slide{

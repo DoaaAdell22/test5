@@ -11,8 +11,8 @@
 .Body .Boxs {
     margin-top: 20px   ;
     display: grid;
-    grid-template-columns: repeat(2 , 550px);
-    grid-template-rows: repeat(12 , auto);
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(8 , auto);
     gap: 20px ;
     
 }
