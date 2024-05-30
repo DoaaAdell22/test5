@@ -102,19 +102,19 @@ const Setting = () => {
                             <p>Social Media Information</p>
                             <div className="social">
                                 <div className="username">
-                                    <FaTwitter className='i' />
+                                    <FaTwitter style={{color : '#1dacbe'}} className='i' />
                                     <input  type="text" placeholder="Twitter Username" />
                                 </div>
                                 <div className="username">
-                                    <FaFacebookF className='i'/>
+                                    <FaFacebookF style={{color : 'blue'}} className='i'/>
                                     <input  type="text" placeholder="FaceBook Username" />
                                 </div>
                                 <div className="username">
-                                    <FaLinkedin className='i'/>
+                                    <FaLinkedin style={{color : '#1f64a5'}} className='i'/>
                                     <input  type="text" placeholder="Linkedin Username" />
                                 </div>
                                 <div className="username">
-                                    <FaYoutube className='i'/>
+                                    <FaYoutube style={{color : 'red'}} className='i'/>
                                     <input  type="text" placeholder="Youtube Username" />                                
                                 </div>
                             </div>
